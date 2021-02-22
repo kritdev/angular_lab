@@ -1,5 +1,6 @@
 .counter {
   background-color: cadetblue;
+  color: whitesmoke;
   display: inline-block;
   padding: 10px;
   border: 2px solid gray;
@@ -12,4 +13,24 @@
   width: 25px;
   height: 25px;
   margin: 0px 2px;
+  border-radius: 5px;
+}
+.counter-button {
+  all: none;
+  background-color: #4CAF50; /* Green */
+  border: 1px solid green;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.counter-button:hover {
+  background-color: #3e8e41;
+}
+.counter-button:active { 
+  background: #00e600; 
+}
+.counter-button:focus
+{
+  outline: none;
 }
