@@ -1,0 +1,18 @@
+.number-even, .number-odd {
+  border: 1px solid gray;
+  border-radius: 8px;
+  width: 125px;
+  height: 25px;
+  margin: 7px auto;
+  padding-top: 7px;
+}
+.number-even {
+  color: green;
+  background-color: #e6ffe6;
+  border-color: #80ff80;
+}
+.number-odd {
+  color: red;
+  background-color: #ffe6e6;
+  border-color: #ff9999;
+}

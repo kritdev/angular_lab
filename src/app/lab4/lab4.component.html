@@ -1,0 +1,7 @@
+<div>
+  <h2>lab4 component</h2>
+  <p *ngFor="let item of items" 
+    [ngClass]="{'number-even': isEven(item), 'number-odd': !isEven(item)}">
+    {{item}}
+  </p>
+</div> 
