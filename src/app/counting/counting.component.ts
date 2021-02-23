@@ -8,5 +8,11 @@ import { Component, Input } from '@angular/core';
 export class CountingComponent {
   @Input()
   counterName:string;
+
+  counter = 0;
+
   constructor() {}
+
+  increment() { this.counter++; }
+  decrement() { this.counter--; }
 }
