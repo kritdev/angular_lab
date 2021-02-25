@@ -13,7 +13,6 @@
   float: left;
 }
 .top-menu-right {
-  background-color: lightskyblue;
   float: right;
 }
 .search-section {
@@ -27,6 +26,8 @@
   padding: 0 .4375rem;
   border-right: 2px solid hsla(0,0%,100%,.22);
   display: inline-block;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 .clear-border {
   border: none;
