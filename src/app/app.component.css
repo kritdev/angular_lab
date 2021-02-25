@@ -1,5 +1,8 @@
+.module {
+  all: unset;
+}
 .app_content {
   text-align: center;
-  width: 80%;
+  width: 1200px;
   margin: auto;
 }
