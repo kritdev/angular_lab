@@ -32,3 +32,6 @@
 .clear-border {
   border: none;
 }
+.inline-block {
+  display: inline-block;
+}
