@@ -1,3 +1,9 @@
 div {
   background-color: lightblue;
 }
+.top-banner-content {
+  padding: 1px;
+}
+.top-banner-spacer {
+  margin-top: 100px;
+}

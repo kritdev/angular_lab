@@ -1,3 +1,8 @@
 div {
   background-color: lightcoral;
 }
+.navbar-content {
+  position:absolute;
+  left:0;
+  right:0;
+}
