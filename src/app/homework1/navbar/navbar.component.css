@@ -1,8 +1,33 @@
-div {
-  background-color: lightcoral;
-}
-.navbar-content {
+.navbar-section {
   position:absolute;
   left:0;
   right:0;
+  background: linear-gradient(-180deg,#f53d2d,#f63);
+}
+.navbar-content {
+  width: 1200px;
+  margin: auto;
+  color: white;
+}
+.top-menu-left {
+  float: left;
+}
+.top-menu-right {
+  background-color: lightskyblue;
+  float: right;
+}
+.search-section {
+  clear: both;
+}
+.menu-item {
+  color: #fff;
+  text-decoration: none;
+  font-size: .8125rem;
+  font-weight: 300;
+  padding: 0 .4375rem;
+  border-right: 2px solid hsla(0,0%,100%,.22);
+  display: inline-block;
+}
+.clear-border {
+  border: none;
 }
