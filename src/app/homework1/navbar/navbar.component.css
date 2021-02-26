@@ -35,3 +35,17 @@
 .inline-block {
   display: inline-block;
 }
+
+.search-content {
+  width: 840px;
+  height: 59px;
+}
+
+.div-logo {
+  width: 200px;
+  text-align: left;
+}
+
+.div-shopping-cart {
+  width: 160px;
+}
