@@ -9,29 +9,10 @@
   margin: auto;
   color: white;
 }
-.top-menu-left {
-  float: left;
-}
-.top-menu-right {
-  float: right;
-}
 .search-section {
   clear: both;
 }
-.menu-item {
-  color: #fff;
-  text-decoration: none;
-  font-size: .8125rem;
-  font-weight: 300;
-  padding: 0 .4375rem;
-  border-right: 2px solid hsla(0,0%,100%,.22);
-  display: inline-block;
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-.clear-border {
-  border: none;
-}
+
 .inline-block {
   display: inline-block;
 }
