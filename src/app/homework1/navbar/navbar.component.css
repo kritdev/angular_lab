@@ -11,6 +11,7 @@
 }
 .search-section {
   clear: both;
+  padding-top: 16px;
 }
 
 .inline-block {
@@ -25,8 +26,11 @@
 .div-logo {
   width: 200px;
   text-align: left;
+  vertical-align: top;
 }
 
 .div-shopping-cart {
   width: 160px;
+  vertical-align: top;
+  padding-top: 15px;
 }
