@@ -1,17 +1,17 @@
-.shopee-searchbar{
+.searchbar{
   display: flex;
   background-color: white;
 }
-.shopee-searchbar-input__input {
+.searchbar-input__input {
   width: 764px;
   height: 34px;
   border: none;
   padding: 0px;
 }
-.shopee-searchbar-input {
+.searchbar-input {
   padding-left: 7px;
 }
-.shopee-searchbar__main {
+.searchbar__main {
   padding: 3px;
 }
 .btn {
@@ -52,7 +52,4 @@
 .btn-solid-primary {
   color: #fff;
   background: #ee4d2d;
-}
-.header-with-search-wrapper .shopee-searchbar>.btn-solid-primary {
-  background: #fb5533;
 }

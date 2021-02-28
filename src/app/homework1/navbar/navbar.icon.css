@@ -1,11 +1,12 @@
-.shopee-svg-icon {
+.svg-icon {
   display: inline-block;
   fill: currentColor;
   position: relative;
 }
-.header-with-search__shopee-logo {
+.icon-logo {
   width: 162px;
   height: 50px;
+  fill: currentColor;
 }
 .icon-shopping-cart-2 {
   color: #fff;
