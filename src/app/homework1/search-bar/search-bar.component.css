@@ -2,17 +2,17 @@
   display: flex;
   background-color: white;
 }
+.searchbar__main {
+  padding: 3px;
+}
+.searchbar-input {
+  padding-left: 7px;
+}
 .searchbar-input__input {
   width: 764px;
   height: 34px;
   border: none;
   padding: 0px;
-}
-.searchbar-input {
-  padding-left: 7px;
-}
-.searchbar__main {
-  padding: 3px;
 }
 .btn {
   box-shadow: 0 1px 1px 0 rgb(0 0 0 / 9%);
