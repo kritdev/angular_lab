@@ -11,12 +11,13 @@ import { CategoryMenuComponent } from './homework1/category-menu/category-menu.c
 import { TopMenuLeftComponent } from './homework1/navbar/top-menu-left/top-menu-left.component';
 import { TopMenuRightComponent } from './homework1/navbar/top-menu-right/top-menu-right.component';
 import { CenterMenuComponent } from './homework1/navbar/center-menu/center-menu.component';
+import { CategoryMenuItemComponent } from './homework1/category-menu/category-menu-item/category-menu-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent, NavbarComponent, SearchBarComponent, TopBannerComponent, CategoryMenuComponent,
-    TopMenuLeftComponent, TopMenuRightComponent, CenterMenuComponent
+    TopMenuLeftComponent, TopMenuRightComponent, CenterMenuComponent, CategoryMenuItemComponent
   ],
   imports: [
     BrowserModule

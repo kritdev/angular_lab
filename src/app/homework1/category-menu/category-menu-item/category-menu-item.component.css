@@ -1,0 +1,17 @@
+div {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+}
+img {
+  width: 45px;
+  display: block;
+  margin: auto;
+}
+
+/* test */
+div {
+  background-color: aqua;
+  width: 150px;
+  height: 67px;
+}
