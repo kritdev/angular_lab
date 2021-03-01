@@ -1,30 +1,6 @@
 <div>
-  <category-menu-item 
-    [title]="'โค้ดส่งฟรี'"
-    [image]="'../../../../assets/cat-menu1.png'">
-  </category-menu-item>
-  <category-menu-item 
-    [title]="'แบรนด์แท้ถูกชัวร์'"
-    [image]="'../../../../assets/cat-menu2.png'">
-  </category-menu-item>
-  <category-menu-item 
-    [title]="'Electronics Zone'"
-    [image]="'../../../../assets/cat-menu3.png'">
-  </category-menu-item>
-  <category-menu-item 
-    [title]="'Fashion Zone Free Shipping'"
-    [image]="'../../../../assets/cat-menu4.png'">
-  </category-menu-item>
-  <category-menu-item 
-    [title]="'Shopee Mart Free 100 Coins*'"
-    [image]="'../../../../assets/cat-menu5.png'">
-  </category-menu-item>
-  <category-menu-item 
-    [title]="'โค้ดส่วนลด'"
-    [image]="'../../../../assets/cat-menu6.png'">
-  </category-menu-item>
-  <category-menu-item 
-    [title]="'Partner Privileges'"
-    [image]="'../../../../assets/cat-menu7.png'">
+  <category-menu-item *ngFor="let item of menuItemList"
+    [title]="item.title"
+    [image]="item.image">
   </category-menu-item>
 </div>
