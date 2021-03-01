@@ -1,9 +1,39 @@
-div {
-  background-color: lawngreen;
-}
 .top-banner-content {
-  padding: 1px;
+  padding-top: 1px;
 }
 .top-banner-spacer {
-  margin-top: 200px;
+  margin-top: 145px;
+}
+.top-banner-center {
+  width: 800px;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.top-banner-right {
+  width: 400px;
+  padding-left: 5px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.top-banner-right-1 {
+  margin-bottom: 5px;
+}
+
+/* test */
+.top-banner-center {
+  background-color: aqua;
+  height: 235px;
+}
+.top-banner-right {
+  background-color: lightcoral;
+  height: 235px;
+}
+.top-banner-right-1 {
+  background-color: lightseagreen;
+  height: 115px;
+}
+.top-banner-right-2 {
+  background-color: lightslategray;
+  height: 115px;
 }
