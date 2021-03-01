@@ -1,10 +1,10 @@
 <div class="searchbar">
   <div class="searchbar__main">
     <form role="search" class="searchbar-input" autocomplete="off" wtx-context="4011F7F8-2596-4E68-8E00-76EED0D2B21C">
-      <input aria-label="ค้นหาสินค้าและร้านค้า" class="searchbar-input__input" maxlength="128" placeholder="ค้นหาสินค้าและร้านค้า" autocomplete="off" value="" wtx-context="0BC0C173-BE13-48ED-8195-644FC06684C1">
+      <input aria-label="ค้นหาสินค้าและร้านค้า" class="searchbar-input__input" maxlength="128" placeholder="ค้นหาสินค้าและร้านค้า" autocomplete="off" [(ngModel)]="searchText" name="searchbar-input">
     </form>
   </div>
-  <button type="button" class="btn btn-solid-primary btn--s btn--inline">
+  <button type="button" class="btn btn-solid-primary btn--s btn--inline" (click)="search()">
     <svg height="19" viewBox="0 0 19 19" width="19" class="svg-icon "><g fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-1016 -32)"><g><g transform="translate(405 21)"><g transform="translate(611 11)"><path d="m8 16c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8zm0-2c-3.3137085 0-6-2.6862915-6-6s2.6862915-6 6-6 6 2.6862915 6 6-2.6862915 6-6 6z"></path><path d="m12.2972351 13.7114222 4.9799555 4.919354c.3929077.3881263 1.0260608.3842503 1.4141871-.0086574.3881263-.3929076.3842503-1.0260607-.0086574-1.414187l-4.9799554-4.919354c-.3929077-.3881263-1.0260608-.3842503-1.4141871.0086573-.3881263.3929077-.3842503 1.0260608.0086573 1.4141871z"></path></g></g></g></g></g></svg>
   </button>
 </div>
