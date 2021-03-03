@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BannerContentComponent {
   constructor() {}
+
+  showmessage(msg) {
+    alert(msg);
+  }
 }
