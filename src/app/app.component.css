@@ -58,8 +58,40 @@ span {
   padding: 100px;
 }
 /* ------------------------------------------------------------------------- */
-
-
+.contact {
+  background-color: white;
+  padding: 20px 100px;
+}
+.contact div {
+  display: inline-block;
+  width: 333px;
+  vertical-align: top;
+}
+.conversation-panel {
+  text-align: center;
+  border: 1px solid lightgray;
+}
+.conversation-panel div {
+  border-bottom: 1px solid lightgray;
+}
+.description-panel {
+  font-size: 0.7em;
+  text-align: left;
+  padding-left: 30px;
+}
+.italic {
+  font-style: italic;
+}
+.conversation-text {
+  width: 333px;
+  box-sizing: border-box;
+}
+/* ------------------------------------------------------------------------- */
+.footer {
+  background-color: #f7f7f7;
+  border-top: solid 3px #d5d5d5;
+  padding: 20px 100px;
+}
 
 /* ------------------------------------------------------------------------- */
 button {
@@ -82,17 +114,22 @@ button {
 .btn-login {
   width: 80px;
 }
-/* ------------------------------------------------------------------------- */
-
-
-
-
-.contact {
+.btn-contact {
+  width: 300px;
+  font-size: 0.7em;
   background-color: white;
-  padding: 20px 100px;
+  border: 1px solid gray;
+  border-radius: 1px;
+  text-align: left;
+  padding-left: 20px;
+  margin: 5px;
 }
-.footer {
-  background-color: #f7f7f7;
-  border-top: solid 3px #d5d5d5;
-  padding: 20px 100px;
+.btn-contact:first-child {
+  border-color: red;
+  color: red;
 }
+/* ------------------------------------------------------------------------- */
+*:focus {
+  outline: none;
+}
+
