@@ -53,8 +53,11 @@ span {
   border: 0px;
 }
 /* ------------------------------------------------------------------------- */
-
-
+.need-help {
+  background-color: #f7f7f7;
+  padding: 100px;
+}
+/* ------------------------------------------------------------------------- */
 
 
 
@@ -63,7 +66,7 @@ button {
   height: 45px;
   width: 145px;
   border-radius: 5px;
-  margin: 0px 10px;
+  margin-right: 10px;
   cursor: pointer;
 }
 .btn-white {
@@ -82,22 +85,14 @@ button {
 /* ------------------------------------------------------------------------- */
 
 
-/* .search,.div-1,.div-2,.div-3 {
-  height: 50px;
-} */
 
 
-
-
-.div-1 {
-  background-color: #f7f7f7;
-  padding: 100px;
-}
-.div-2 {
+.contact {
   background-color: white;
-  padding: 100px;
+  padding: 20px 100px;
 }
-.div-3 {
+.footer {
   background-color: #f7f7f7;
   border-top: solid 3px #d5d5d5;
+  padding: 20px 100px;
 }
