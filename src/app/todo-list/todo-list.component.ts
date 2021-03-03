@@ -16,4 +16,8 @@ export class ToDoListComponent {
     this.todoList.push(this.task);
     this.task = '';
   }
+
+  deleteTask(index) {
+    this.todoList.splice(index, 1);
+  }
 }

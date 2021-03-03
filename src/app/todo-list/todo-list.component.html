@@ -4,7 +4,10 @@
   </div>
   <div>
     <ul>
-      <li *ngFor='let todo of todoList'>{{todo}}</li>
+      <li *ngFor='let todo of todoList; let i=index;'>
+        <span>{{todo}}</span>
+        <button (click)="deleteTask(i)">Delete</button>
+      </li>
     </ul>
   </div>
   <div>
