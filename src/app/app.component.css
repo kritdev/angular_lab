@@ -20,6 +20,9 @@ a {
   text-decoration: none;
   color: white;
 }
+.menu a {
+  margin-right: 20px;
+}
 /* ------------------------------------------------------------------------- */
 .banner-content {
   clear: both;
@@ -61,6 +64,20 @@ button {
   width: 145px;
   border-radius: 5px;
   margin: 0px 10px;
+  cursor: pointer;
+}
+.btn-white {
+  background-color: white;
+  border-color: white;
+  color: red;
+}
+.btn-red {
+  background-color: rgb(224, 49, 61);
+  border-color: rgb(224, 49, 61);
+  color: white;
+}
+.btn-login {
+  width: 80px;
 }
 /* ------------------------------------------------------------------------- */
 
