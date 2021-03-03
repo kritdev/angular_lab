@@ -1,0 +1,86 @@
+.container {
+  width: 1200px;
+  margin: auto;
+}
+.banner {
+  background-image: url("/assets/background.png");
+  position: relative;
+}
+/* ------------------------------------------------------------------------- */
+.logo {
+  float: left;
+  margin: 10px 20px;
+}
+/* ------------------------------------------------------------------------- */
+.menu {
+  float: right;
+  margin: 10px 20px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+/* ------------------------------------------------------------------------- */
+.banner-content {
+  clear: both;
+  height: 280px;
+  color: white;
+  padding: 0px 130px;
+}
+span {
+  display: block;
+}
+/* ------------------------------------------------------------------------- */
+.search {
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  /* height: 60px;
+  width: 940px; */
+  top: 325px;
+  left: 130px;
+  border: 1px solid rgb(191, 94, 98);
+  border-radius: 7px;
+}
+.searchText {
+  height: 40px;
+  width: 900px;
+  margin: 5px 10px 5px 30px;
+  box-sizing: border-box;
+  border: 0px;
+}
+/* ------------------------------------------------------------------------- */
+
+
+
+
+
+/* ------------------------------------------------------------------------- */
+button {
+  height: 45px;
+  width: 145px;
+  border-radius: 5px;
+  margin: 0px 10px;
+}
+/* ------------------------------------------------------------------------- */
+
+
+/* .search,.div-1,.div-2,.div-3 {
+  height: 50px;
+} */
+
+
+
+
+.div-1 {
+  background-color: #f7f7f7;
+  padding: 100px;
+}
+.div-2 {
+  background-color: white;
+  padding: 100px;
+}
+.div-3 {
+  background-color: #f7f7f7;
+  border-top: solid 3px #d5d5d5;
+}
