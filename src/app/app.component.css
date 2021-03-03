@@ -62,14 +62,20 @@ span {
   background-color: white;
   padding: 20px 100px;
 }
-.contact div {
+.contact > div {
   display: inline-block;
   width: 333px;
   vertical-align: top;
 }
 .conversation-panel {
+  width: 250px;
+  margin: auto;
   text-align: center;
   border: 1px solid lightgray;
+}
+.name-panel {
+  background-color: lightgray;
+  padding: 10px;
 }
 .conversation-panel div {
   border-bottom: 1px solid lightgray;
@@ -77,15 +83,25 @@ span {
 .description-panel {
   font-size: 0.7em;
   text-align: left;
-  padding-left: 30px;
+  padding: 10px;
 }
+.description-panel > div {
+  display: inline-block;
+  margin-right: 10px;
+  border: none;
+}
+.conversation-text {
+  width: 250px;
+  padding: 10px;
+  border: 0px;
+  resize: none;
+  box-sizing: border-box;
+}
+
 .italic {
   font-style: italic;
 }
-.conversation-text {
-  width: 333px;
-  box-sizing: border-box;
-}
+
 /* ------------------------------------------------------------------------- */
 .footer {
   background-color: #f7f7f7;
@@ -127,6 +143,14 @@ button {
 .btn-contact:first-child {
   border-color: red;
   color: red;
+}
+.btn-conversation {
+  background-color: rgb(62, 153, 180);
+  border-color: rgb(62, 153, 180);
+  color: white;
+  height: 30px;
+  border-radius: 1px;
+  margin: 10px auto;
 }
 /* ------------------------------------------------------------------------- */
 *:focus {
