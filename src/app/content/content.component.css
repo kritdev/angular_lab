@@ -1,0 +1,67 @@
+.need-help {
+  background-color: #f7f7f7;
+  padding: 100px;
+}
+/* ------------------------------------------------------------------------- */
+.contact {
+  background-color: white;
+  padding: 20px 100px;
+}
+.contact > div {
+  display: inline-block;
+  width: 333px;
+  vertical-align: top;
+}
+.conversation-panel {
+  width: 250px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+.name-panel {
+  background-color: lightgray;
+  padding: 10px;
+}
+.conversation-panel div {
+  border-bottom: 1px solid lightgray;
+}
+.description-panel {
+  font-size: 0.7em;
+  text-align: left;
+  padding: 10px;
+}
+.description-panel > div {
+  display: inline-block;
+  margin-right: 10px;
+  border: none;
+}
+.conversation-text {
+  width: 250px;
+  padding: 10px;
+  border: 0px;
+  resize: none;
+  box-sizing: border-box;
+}
+/* ------------------------------------------------------------------------- */
+.btn-contact {
+  width: 300px;
+  font-size: 0.7em;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 1px;
+  text-align: left;
+  padding-left: 20px;
+  margin: 5px;
+}
+.btn-contact:first-child {
+  border-color: red;
+  color: red;
+}
+.btn-conversation {
+  background-color: rgb(62, 153, 180);
+  border-color: rgb(62, 153, 180);
+  color: white;
+  height: 30px;
+  border-radius: 1px;
+  margin: 10px auto;
+}

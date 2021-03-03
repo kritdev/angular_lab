@@ -1,0 +1,10 @@
+.menu {
+  float: right;
+  margin: 10px 20px;
+}
+.menu a {
+  margin-right: 20px;
+}
+.btn-login {
+  width: 80px;
+}
