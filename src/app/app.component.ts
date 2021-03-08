@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-lab';
+  homeTitleValue = `Set home's title from typescript`;
 }
