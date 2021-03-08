@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ToDoListComponent } from './todo-list/todo-list.component';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToDoListComponent
+    ToDoListComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,

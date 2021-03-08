@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from '../models/task';
 
 @Component({
   selector: 'todo-list',
@@ -8,13 +9,17 @@ import { Component } from '@angular/core';
 export class ToDoListComponent {
 
   todoList = [];
-  task = '';
+  task : Task;
+  taskID = 1;
 
-  constructor() {}
+  constructor() {
+    this.task = new Task();
+  }
 
   addTask() {
+    this.task.id = this.taskID++;
     this.todoList.push(this.task);
-    this.task = '';
+    this.task = new Task();
   }
 
   deleteTask(index) {

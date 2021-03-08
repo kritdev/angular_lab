@@ -3,16 +3,12 @@
     My Tasks today
   </div>
   <div>
-    <ul>
-      <li *ngFor='let todo of todoList; let i=index;'>
-        <span>{{todo}}</span>
-        <button (click)="deleteTask(i)">Delete</button>
-      </li>
-    </ul>
+    <app-task *ngFor="let todo of todoList;" [task]=todo></app-task>
   </div>
   <div>
-    <span>Task:</span>
-    <input type="text" [(ngModel)]='task'>
+    <span>Add Task:</span> <br>
+    Name:<input type="text" [(ngModel)]='task.name'> <br>
+    Description:<input type="text" [(ngModel)]='task.description'> <br>
     <button (click)='addTask()'>Add</button>
   </div>
 </div>

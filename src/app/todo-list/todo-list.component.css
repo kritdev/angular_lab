@@ -1,11 +1,3 @@
 div > span {
   font-weight: bold;
 }
-li span {
-  width: 300px;
-  display: inline-block;
-  border-bottom: 1px solid lightgray;
-}
-li {
-  word-wrap: break-word;
-}
