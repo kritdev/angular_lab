@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Task } from '../models/task';
 
 @Component({
@@ -10,12 +10,15 @@ export class TaskComponent implements OnInit {
   @Input()
   task: Task;
 
+  @Output()
+  OnDeleted: EventEmitter<Task> = new EventEmitter(); 
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  deleteTask(){
-    
+  delete(){
+    this.OnDeleted.emit(this.task);
   }
 }

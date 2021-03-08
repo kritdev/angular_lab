@@ -3,7 +3,11 @@
     My Tasks today
   </div>
   <div>
-    <app-task *ngFor="let todo of todoList;" [task]=todo></app-task>
+    <app-task 
+      *ngFor="let task of todoList" 
+      [task]=task
+      (OnDeleted)="deleteTask($event)">
+    </app-task>
   </div>
   <div>
     <span>Add Task:</span> <br>

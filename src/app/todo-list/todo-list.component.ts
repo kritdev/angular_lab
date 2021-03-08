@@ -22,7 +22,9 @@ export class ToDoListComponent {
     this.task = new Task();
   }
 
-  deleteTask(index) {
-    this.todoList.splice(index, 1);
+  deleteTask(task) {
+    let index = this.todoList.findIndex( item => item.id === task.id);
+    if(index >= 0 ) 
+      this.todoList.splice(index, 1);
   }
 }
