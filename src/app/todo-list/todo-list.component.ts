@@ -14,9 +14,6 @@ export class ToDoListComponent {
 
   constructor() {
     this.task = new Task();
-    this.todoList.push({id:1, name:'aaa', description:'1111111'} );
-    this.todoList.push({id:1, name:'bbb', description:'2222222'} );
-    this.todoList.push({id:1, name:'ccc', description:'3333333'} );
   }
 
   addTask() {

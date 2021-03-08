@@ -9,16 +9,16 @@
       (OnDeleted)="deleteTask($event)">
     </app-task>
   </div>
-  <div class="card mx-auto px-4 col-sm-8">
+  <div class="card mx-4 mt-4 px-4">
     <span>Add Task:</span> <br>
     <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Name:</label>
+      <label class="col-sm-2 col-form-label px-1">Name:</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" [(ngModel)]='task.name'>
       </div>
     </div>
     <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Description:</label>
+      <label class="col-sm-2 col-form-label px-1">Description:</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" [(ngModel)]='task.description'>
       </div>
