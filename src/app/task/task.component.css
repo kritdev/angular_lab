@@ -1,3 +1,11 @@
 .align-right {
   text-align: right;
 }
+.btn {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.card:hover {
+  border: 1px solid #9ab3a5;
+  cursor: pointer;
+}
