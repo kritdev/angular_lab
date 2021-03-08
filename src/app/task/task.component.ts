@@ -13,6 +13,11 @@ export class TaskComponent implements OnInit {
   @Output()
   OnDeleted: EventEmitter<Task> = new EventEmitter(); 
 
+  @Output()
+  OnSelected: EventEmitter<TaskComponent> = new EventEmitter(); 
+
+  isSelected: Boolean;
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -20,5 +25,9 @@ export class TaskComponent implements OnInit {
 
   delete(){
     this.OnDeleted.emit(this.task);
+  }
+
+  selectTask() {
+    this.OnSelected.emit(this);
   }
 }

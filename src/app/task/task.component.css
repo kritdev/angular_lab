@@ -9,3 +9,6 @@
   border: 1px solid #9ab3a5;
   cursor: pointer;
 }
+.isSelected {
+  background-color: #f0f4f2;
+}

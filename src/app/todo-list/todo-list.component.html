@@ -6,7 +6,8 @@
     <app-task 
       *ngFor="let task of todoList" 
       [task]=task
-      (OnDeleted)="deleteTask($event)">
+      (OnDeleted)="deleteTask($event)"
+      (OnSelected)="selectTaskComponent($event)">
     </app-task>
   </div>
   <div class="card mx-4 mt-4 px-4">
