@@ -10,6 +10,9 @@
       (OnSelected)="selectTaskComponent($event)">
     </app-task>
   </div>
+  
+  <app-task-detail *ngIf="selectedTask" [task]="selectedTask"></app-task-detail>
+
   <div class="card mx-4 mt-4 px-4">
     <span>Add Task:</span> <br>
     <div class="form-group row">

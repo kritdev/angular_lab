@@ -13,13 +13,15 @@ export class ToDoListComponent {
 
   todoList = [];
   task : Task;
+  selectedTask : Task;
   taskID = 1;
 
   constructor() {
     this.task = new Task();
-    this.todoList.push({id:1, name:'task 1', description:'abcd12345678'});
+    this.todoList.push({id:1, name:'task 1', description:'abcd12345678 000000000000000 00000000000000 0000000000000000 000000000000000'});
     this.todoList.push({id:2, name:'task 2', description:'aaaaaaaaaaa8'});
     this.todoList.push({id:3, name:'task 3', description:'ab5555555555'});
+    this.selectedTask = this.todoList[0];
   }
 
   addTask() {
@@ -37,5 +39,9 @@ export class ToDoListComponent {
   selectTaskComponent(taskComponent) {
     this.taskList.forEach( item => item.isSelected = false);
     taskComponent.isSelected = true;
+
+    //show task
+    this.selectedTask = taskComponent.task;
   }
+
 }
