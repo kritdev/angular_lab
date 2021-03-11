@@ -2,7 +2,7 @@ import { ConfigurationItem } from "./configuration-item";
 import { ConfigurationMenu } from "./configuration-menu";
 
 export class Configuration {
-  getConfiguration() {
+  public getConfiguration() {
     let menuList: ConfigurationMenu[] = [];
 
     let commonMenu = new ConfigurationMenu('Commonly Used',[],[]);
@@ -48,11 +48,6 @@ export class Configuration {
     menuList.push( extensionsMenu );
 
 
-    return [
-
-      // id: "cursorBlinking",
-      // name: "Accessibili",
-      // description: "Controls the cursor animation style."
-    ];
+    return menuList;
   }
 }
