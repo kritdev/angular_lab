@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { TabPanelComponent } from './tab-panel/tab-panel.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { MainPanelComponent } from './main-panel/main-panel.component';
+import { ConfigurationMenuComponent } from './components/configuration-menu/configuration-menu.component';
+import { ConfigurationItemComponent } from './components/configuration-item/configuration-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabPanelComponent,
     SidePanelComponent,
-    MainPanelComponent
+    MainPanelComponent,
+    ConfigurationMenuComponent,
+    ConfigurationItemComponent
   ],
   imports: [
     BrowserModule
