@@ -36,8 +36,12 @@ ul {
 .active {
   display: block;
 }
-li.active {
-  border: 1px solid blue;
+span {
+  display: block;
+  border: 1px solid transparent;
+}
+span.selected {
+  border-color: blue;
 }
 ul.nested > li {
   padding-left: 40px;

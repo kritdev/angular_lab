@@ -4,7 +4,8 @@
       <app-configuration-menu
         *ngFor='let configurationMenu of configList'
         [configurationMenu]="configurationMenu"
-        [menuLevel]="0">
+        [menuLevel]="0"
+        (OnSelected)="selectMenu($event)">
       </app-configuration-menu>
     </ul>
   </div>

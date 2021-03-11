@@ -1,7 +1,9 @@
-<li [style.padding-left.px]="menuLevel * 20" 
+<li 
+  [style.padding-left.px]="menuLevel * 20" 
   (click)="toggleSubmenu($event)">
     <span class="caret" [class.caret-down]="showSubmenu"
-      [class.caret-none]="!hasSubmenu()">
+      [class.caret-none]="!hasSubmenu()"
+      [class.selected]="isSelected">
       {{configurationMenu.menu}}
     </span>
   <ul class="nested" [class.active]="showSubmenu"

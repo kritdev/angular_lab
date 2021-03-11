@@ -1,5 +1,4 @@
-import { TmplAstRecursiveVisitor } from '@angular/compiler';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ConfigurationMenu } from 'src/app/models/configuration-menu';
 
 @Component({
@@ -14,7 +13,11 @@ export class ConfigurationMenuComponent implements OnInit {
   @Input()
   menuLevel: number;
 
+  @Output()
+  OnSelected: EventEmitter<ConfigurationMenuComponent> = new EventEmitter();
+
   showSubmenu: boolean;
+  isSelected: boolean;
 
   constructor() { }
 
@@ -31,5 +34,6 @@ export class ConfigurationMenuComponent implements OnInit {
   toggleSubmenu(event) {
     this.showSubmenu = !this.showSubmenu;
     event.stopPropagation();
+    this.OnSelected.emit(this);
   }
 }
