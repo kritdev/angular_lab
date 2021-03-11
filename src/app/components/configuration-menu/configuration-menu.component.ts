@@ -14,6 +14,8 @@ export class ConfigurationMenuComponent implements OnInit {
   @Input()
   menuLevel: number;
 
+  showSubmenu: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -26,7 +28,8 @@ export class ConfigurationMenuComponent implements OnInit {
     return this.configurationMenu.subMenuList && this.configurationMenu.subMenuList.length;
   }
 
-  // ngAfterViewInit() {
-  //   console.log('configurationMenu = ' + JSON.stringify(this.configurationMenu));
-  // }
+  toggleSubmenu(event) {
+    this.showSubmenu = !this.showSubmenu;
+    event.stopPropagation();
+  }
 }

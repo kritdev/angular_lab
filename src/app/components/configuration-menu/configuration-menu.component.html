@@ -1,9 +1,11 @@
-<li [style.padding-left.px]="menuLevel * 20" >
-    <span class="caret" 
+<li [style.padding-left.px]="menuLevel * 20" 
+  (click)="toggleSubmenu($event)">
+    <span class="caret" [class.caret-down]="showSubmenu"
       [class.caret-none]="!hasSubmenu()">
       {{configurationMenu.menu}}
     </span>
-  <ul class="nested active" *ngIf='configurationMenu.subMenuList'>
+  <ul class="nested" [class.active]="showSubmenu"
+    *ngIf='configurationMenu.subMenuList'>
     <app-configuration-menu 
       *ngFor='let configurationMenu of configurationMenu.subMenuList'
       [configurationMenu]="configurationMenu"
