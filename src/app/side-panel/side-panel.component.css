@@ -10,6 +10,10 @@ ul, #myUL {
   padding: 0px 16px;
 }
 
+nav {
+  max-width: 170px;
+}
+
 /* Style the caret/arrow */
 .caret {
   cursor: pointer;
@@ -46,7 +50,4 @@ li.active {
 }
 ul.nested > li {
   padding-left: 40px;
-}
-nav {
-  max-width: 170px;
 }
