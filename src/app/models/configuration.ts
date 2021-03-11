@@ -30,8 +30,18 @@ export class Configuration {
     textEditorMenu.subMenuList.push(findMenu);
     textEditorMenu.subMenuList.push(fontMenu);
     textEditorMenu.subMenuList.push(formatMenu);
+
     /*----------------------------------------------------------------*/
     let workbenchMenu = new ConfigurationMenu('Workbench',[],[]);
+    workbenchMenu.subMenuList.push(new ConfigurationMenu('Appearance',[],[]));
+    workbenchMenu.subMenuList.push(new ConfigurationMenu('Breadcrumbs',[],[]));
+    workbenchMenu.subMenuList.push(new ConfigurationMenu('Editor Manage',[],[]));
+    workbenchMenu.subMenuList.push(new ConfigurationMenu('Setting Editor',[],[]));
+    workbenchMenu.subMenuList.push(new ConfigurationMenu('Zen Mode',[],[]));
+    workbenchMenu.subMenuList.push(new ConfigurationMenu('Screencast Mode',[],[]));
+
+
+    /*----------------------------------------------------------------*/
     let windowMenu = new ConfigurationMenu('Window',[],[]);
     let featureMenu = new ConfigurationMenu('Feature',[],[]);
     let application = new ConfigurationMenu('Application',[],[]);
