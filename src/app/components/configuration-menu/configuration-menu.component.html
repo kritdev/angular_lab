@@ -1,4 +1,4 @@
-<li>
+<li [style.padding-left.px]="menuLevel * 20" >
     <span class="caret" 
       [class.caret-none]="!hasSubmenu()">
       {{configurationMenu.menu}}
@@ -6,7 +6,8 @@
   <ul class="nested active" *ngIf='configurationMenu.subMenuList'>
     <app-configuration-menu 
       *ngFor='let configurationMenu of configurationMenu.subMenuList'
-      [configurationMenu]="configurationMenu">
+      [configurationMenu]="configurationMenu"
+      [menuLevel]="menuLevel + 1">
     </app-configuration-menu>
   </ul>
 </li>

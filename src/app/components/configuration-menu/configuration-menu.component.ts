@@ -11,6 +11,9 @@ export class ConfigurationMenuComponent implements OnInit {
   @Input()
   configurationMenu: ConfigurationMenu;
 
+  @Input()
+  menuLevel: number;
+
   constructor() { }
 
   ngOnInit(): void {
