@@ -16,7 +16,7 @@ export class Configuration {
     textEditorMenu.itemList.push(new ConfigurationItem('autoClosingBrackets','Auto Closing Brackets','Controis whether the ecditor should automaticaliy close brackets arter the user acicis an openng bracket.'));
     textEditorMenu.itemList.push(new ConfigurationItem('autoClosingOvertype','Auto Closing Overtype','Contrcls wnetherthe editor sinould iype over closing quates or brackets.'));
 
-    let cursorMenu = new ConfigurationMenu('Cursor',[],[]);
+    let cursorMenu = new ConfigurationMenu('Cursor',[],null);
     cursorMenu.itemList.push(new ConfigurationItem('','Cursor Blinking','Control the cursor animation style.'));
     cursorMenu.itemList.push(new ConfigurationItem('','Cursor Smooth Caret Animation','Controls whether the smooth caret animation should be enabled.'));
     cursorMenu.itemList.push(new ConfigurationItem('','Cursor Style','Controls the cursor style.'));

@@ -1,7 +1,20 @@
-<li><span class="caret caret-down">{{configurationMenu.menu}}</span>
+<li>
+    <span class="caret" 
+      [class.caret-none]="!hasSubmenu()">
+      {{configurationMenu.menu}}
+    </span>
   <ul class="nested active" *ngIf='configurationMenu.subMenuList'>
-    <li class="active">Cursor</li>
+    <app-configuration-menu 
+      *ngFor='let configurationMenu of configurationMenu.subMenuList'
+      [configurationMenu]="configurationMenu">
+    </app-configuration-menu>
+  </ul>
+</li>
+
+<!-- <li><span class="caret caret-down">"Text Editor"</span>
+  <ul class="nested active">
+    <li class="active" >Cursor</li>
     <li>Find</li>
     <li>Font</li>
   </ul>
-</li>
+</li> -->

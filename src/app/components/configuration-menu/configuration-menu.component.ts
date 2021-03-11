@@ -1,3 +1,4 @@
+import { TmplAstRecursiveVisitor } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 import { ConfigurationMenu } from 'src/app/models/configuration-menu';
 
@@ -15,7 +16,14 @@ export class ConfigurationMenuComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  ngAfterViewInit() {
-    console.log('configurationMenu = ' + JSON.stringify(this.configurationMenu));
+  /**
+   * if subMenuList is null or subMenuList.length = 0, return false;
+   */
+  hasSubmenu() {
+    return this.configurationMenu.subMenuList && this.configurationMenu.subMenuList.length;
   }
+
+  // ngAfterViewInit() {
+  //   console.log('configurationMenu = ' + JSON.stringify(this.configurationMenu));
+  // }
 }
