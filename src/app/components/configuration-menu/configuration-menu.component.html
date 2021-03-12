@@ -1,0 +1,27 @@
+<li (click)="toggleSubmenu($event)">
+    <span 
+      [style.padding-left.px]="menuLevel * 10"
+      class="caret" 
+      [class.caret-down]="showSubmenu"
+      [class.caret-none]="!hasSubmenu()"
+      [class.selected]="isSelected">
+      {{configurationMenu.menu}}
+    </span>
+  <ul class="nested" [class.active]="showSubmenu"
+    *ngIf='configurationMenu.subMenuList'>
+    <app-configuration-menu 
+      *ngFor='let configurationMenu of configurationMenu.subMenuList'
+      [configurationMenu]="configurationMenu"
+      [menuLevel]="menuLevel + 1"
+      (OnSelected)="selectSubMenu($event)">
+    </app-configuration-menu>
+  </ul>
+</li>
+
+<!-- <li><span class="caret caret-down">"Text Editor"</span>
+  <ul class="nested active">
+    <li class="active" >Cursor</li>
+    <li>Find</li>
+    <li>Font</li>
+  </ul>
+</li> -->

@@ -1,18 +1,9 @@
 /* Remove default bullets */
-ul, #myUL {
+ul {
   list-style-type: none;
   padding: 0;
 }
 
-/* Remove margins and padding from the parent ul */
-#myUL {
-  margin: 0;
-  padding: 0px 16px;
-}
-
-nav {
-  max-width: 170px;
-}
 
 /* Style the caret/arrow */
 .caret {
@@ -45,8 +36,12 @@ nav {
 .active {
   display: block;
 }
-li.active {
-  border: 1px solid blue;
+span {
+  display: block;
+  border: 1px solid transparent;
+}
+span.selected {
+  border-color: blue;
 }
 ul.nested > li {
   padding-left: 40px;
