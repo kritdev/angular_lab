@@ -16,26 +16,21 @@ export class Configuration {
     textEditorMenu.itemList.push(new ConfigurationItem('autoClosingBrackets','Auto Closing Brackets','Controis whether the ecditor should automaticaliy close brackets arter the user acicis an openng bracket.'));
     textEditorMenu.itemList.push(new ConfigurationItem('autoClosingOvertype','Auto Closing Overtype','Contrcls wnetherthe editor sinould iype over closing quates or brackets.'));
 
-    let cursorMenu = new ConfigurationMenu('Cursor',[],null);
-    cursorMenu.itemList.push(new ConfigurationItem('','Cursor Blinking','Control the cursor animation style.'));
-    cursorMenu.itemList.push(new ConfigurationItem('','Cursor Smooth Caret Animation','Controls whether the smooth caret animation should be enabled.'));
-    cursorMenu.itemList.push(new ConfigurationItem('','Cursor Style','Controls the cursor style.'));
-    cursorMenu.itemList.push(new ConfigurationItem('','Cursor Surrounding Lines','Controls the minimal number of visible leading and trailing lines surrounding the cursor. Known as \'scrollOff\' or \'scrollOffset\' in some other editors.'));
+    textEditorMenu.subMenuList.push(new ConfigurationMenu('Cursor',[],[]));
+    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('','Cursor Blinking','Control the cursor animation style.'));
+    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('','Cursor Smooth Caret Animation','Controls whether the smooth caret animation should be enabled.'));
+    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('','Cursor Style','Controls the cursor style.'));
+    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('','Cursor Surrounding Lines','Controls the minimal number of visible leading and trailing lines surrounding the cursor. Known as \'scrollOff\' or \'scrollOffset\' in some other editors.'));
 
-    let findMenu = new ConfigurationMenu('Find',[],[]);
-    let fontMenu = new ConfigurationMenu('Font',[],[]);
-    let formatMenu = new ConfigurationMenu('Format',[],[]);
-
-    textEditorMenu.subMenuList.push(cursorMenu);
-    textEditorMenu.subMenuList.push(findMenu);
-    textEditorMenu.subMenuList.push(fontMenu);
-    textEditorMenu.subMenuList.push(formatMenu);
+    textEditorMenu.subMenuList.push(new ConfigurationMenu('Find',[],[]));
+    textEditorMenu.subMenuList.push(new ConfigurationMenu('Font',[],[]));
+    textEditorMenu.subMenuList.push(new ConfigurationMenu('Format',[],[]));  
 
     /*----------------------------------------------------------------*/
     let workbenchMenu = new ConfigurationMenu('Workbench',[],[]);
     workbenchMenu.subMenuList.push(new ConfigurationMenu('Appearance',[],[]));
     workbenchMenu.subMenuList.push(new ConfigurationMenu('Breadcrumbs',[],[]));
-    workbenchMenu.subMenuList.push(new ConfigurationMenu('Editor Manage',[],[]));
+    workbenchMenu.subMenuList.push(new ConfigurationMenu('Editor Management',[],[]));
     workbenchMenu.subMenuList.push(new ConfigurationMenu('Setting Editor',[],[]));
     workbenchMenu.subMenuList.push(new ConfigurationMenu('Zen Mode',[],[]));
     workbenchMenu.subMenuList.push(new ConfigurationMenu('Screencast Mode',[],[]));
