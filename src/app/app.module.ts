@@ -7,6 +7,7 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
 import { MainPanelComponent } from './main-panel/main-panel.component';
 import { ConfigurationMenuComponent } from './components/configuration-menu/configuration-menu.component';
 import { ConfigurationItemComponent } from './components/configuration-item/configuration-item.component';
+import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ConfigurationItemComponent } from './components/configuration-item/conf
     SidePanelComponent,
     MainPanelComponent,
     ConfigurationMenuComponent,
-    ConfigurationItemComponent
+    ConfigurationItemComponent,
+    TabMenuComponent
   ],
   imports: [
     BrowserModule
