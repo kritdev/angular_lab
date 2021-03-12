@@ -40,8 +40,11 @@ export class ConfigurationMenuComponent implements OnInit {
     this.OnSelected.emit(this);
   }
 
+  /**
+   * Propagate OnSelected event
+   * @param event 
+   */
   selectSubMenu(event) {
-    this.configComponentList.forEach(element => element.isSelected = false );
     this.OnSelected.emit(event);
   }
 }

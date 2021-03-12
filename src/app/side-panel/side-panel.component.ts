@@ -20,7 +20,16 @@ export class SidePanelComponent implements OnInit {
   }
 
   selectMenu(configComponent: ConfigurationMenuComponent) {
-    this.configComponentList.forEach(element => element.isSelected = false );
+    this.clearMenuSelected(this.configComponentList);
     configComponent.isSelected = true;
+  }
+
+  clearMenuSelected(configComList: QueryList<ConfigurationMenuComponent>) {
+    if(!configComList) return;
+
+    configComList.forEach(configCom => {
+      configCom.isSelected = false;
+      this.clearMenuSelected(configCom.configComponentList);
+    });
   }
 }
