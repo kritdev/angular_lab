@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tab-menu',
@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab-menu.component.css']
 })
 export class TabMenuComponent implements OnInit {
+  @Input()
+  title: String;
+
+  @Output()
+  OnSelected: EventEmitter<TabMenuComponent> = new EventEmitter();
+
+  isSeleted: Boolean;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  selectMenu() {
+    this.OnSelected.emit(this);
+  }
 }
