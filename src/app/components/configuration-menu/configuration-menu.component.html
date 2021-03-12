@@ -11,7 +11,8 @@
     <app-configuration-menu 
       *ngFor='let configurationMenu of configurationMenu.subMenuList'
       [configurationMenu]="configurationMenu"
-      [menuLevel]="menuLevel + 1">
+      [menuLevel]="menuLevel + 1"
+      (OnSelected)="selectSubMenu($event)">
     </app-configuration-menu>
   </ul>
 </li>

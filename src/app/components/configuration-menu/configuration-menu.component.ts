@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, QueryList, ViewChildren } from '@angular/core';
 import { ConfigurationMenu } from 'src/app/models/configuration-menu';
 
 @Component({
@@ -16,6 +16,9 @@ export class ConfigurationMenuComponent implements OnInit {
   @Output()
   OnSelected: EventEmitter<ConfigurationMenuComponent> = new EventEmitter();
 
+  @ViewChildren(ConfigurationMenuComponent)
+  configComponentList: QueryList<ConfigurationMenuComponent>;
+  
   showSubmenu: boolean;
   isSelected: boolean;
 
@@ -35,5 +38,10 @@ export class ConfigurationMenuComponent implements OnInit {
     this.showSubmenu = !this.showSubmenu;
     event.stopPropagation();
     this.OnSelected.emit(this);
+  }
+
+  selectSubMenu(event) {
+    this.configComponentList.forEach(element => element.isSelected = false );
+    this.OnSelected.emit(event);
   }
 }
