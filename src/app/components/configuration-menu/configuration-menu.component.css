@@ -39,6 +39,7 @@ ul {
 span {
   display: block;
   border: 1px solid transparent;
+  white-space: nowrap;
 }
 span.selected {
   border-color: blue;
