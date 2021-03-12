@@ -1,12 +1,4 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-  <app-configuration-item 
-    *ngFor="let item of getConfigurationItemList(configList)"
-    [configurationItem]="item">
-  </app-configuration-item>
-
-
-  <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-
-  <h2 id="section-title">Section title</h2>
-</main>
-
+<app-configuration-item 
+  *ngFor="let item of getConfigurationItemList(configList)"
+  [configurationItem]="item">
+</app-configuration-item>
