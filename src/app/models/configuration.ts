@@ -2,9 +2,33 @@ import { ConfigurationItem } from "./configuration-item";
 import { ConfigurationMenu } from "./configuration-menu";
 
 export class Configuration {
-  public getConfiguration() {
-    let menuList: ConfigurationMenu[] = [];
+  menuList: ConfigurationMenu[] = [];
+  userSetting = {};
+  workspaceSetting = {};
 
+  constructor () {
+    this.createMenuList();
+    this.createUserSetting();
+    this.createWorkspaceSetting();
+  }
+
+  public createUserSetting() {
+    this.userSetting = {
+      'file.autoSave': 'true',
+      'editor.fontSize': '16',
+      'autoClosingBrackets': 'false'
+    }
+  }
+
+  public createWorkspaceSetting() {
+    this.workspaceSetting = {
+      'file.autoSave': 'false',
+      'editor.fontSize': '16',
+      'autoClosingBrackets': 'true'
+    }
+  }
+
+  public createMenuList() {
     let commonMenu = new ConfigurationMenu('Commonly Used',[],[]);
     commonMenu.itemList.push(new ConfigurationItem('file.autoSave', 'Auto Save', 'Controls auto save of dirty editor.'));
     commonMenu.itemList.push(new ConfigurationItem('editor.fontSize', 'Font Size', 'Controls the font size in pixels.'));
@@ -17,10 +41,10 @@ export class Configuration {
     textEditorMenu.itemList.push(new ConfigurationItem('autoClosingOvertype','Auto Closing Overtype','Contrcls wnetherthe editor sinould iype over closing quates or brackets.'));
 
     textEditorMenu.subMenuList.push(new ConfigurationMenu('Cursor',[],[]));
-    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('','Cursor Blinking','Control the cursor animation style.'));
-    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('','Cursor Smooth Caret Animation','Controls whether the smooth caret animation should be enabled.'));
-    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('','Cursor Style','Controls the cursor style.'));
-    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('','Cursor Surrounding Lines','Controls the minimal number of visible leading and trailing lines surrounding the cursor. Known as \'scrollOff\' or \'scrollOffset\' in some other editors.'));
+    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('cursorBlinking','Cursor Blinking','Control the cursor animation style.'));
+    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('cursorSmoothCaretAnimation','Cursor Smooth Caret Animation','Controls whether the smooth caret animation should be enabled.'));
+    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('cursorStyle','Cursor Style','Controls the cursor style.'));
+    textEditorMenu.subMenuList[0].itemList.push(new ConfigurationItem('cursorSurroundingLines','Cursor Surrounding Lines','Controls the minimal number of visible leading and trailing lines surrounding the cursor. Known as \'scrollOff\' or \'scrollOffset\' in some other editors.'));
 
     textEditorMenu.subMenuList.push(new ConfigurationMenu('Find',[],[]));
     textEditorMenu.subMenuList.push(new ConfigurationMenu('Font',[],[]));
@@ -44,15 +68,24 @@ export class Configuration {
 
     textEditorMenu.itemList.push(new ConfigurationItem('','',''));
 
-    menuList.push( commonMenu );
-    menuList.push( textEditorMenu );
-    menuList.push( workbenchMenu );
-    menuList.push( windowMenu );
-    menuList.push( featureMenu );
-    menuList.push( application );
-    menuList.push( extensionsMenu );
+    this.menuList.push( commonMenu );
+    this.menuList.push( textEditorMenu );
+    this.menuList.push( workbenchMenu );
+    this.menuList.push( windowMenu );
+    this.menuList.push( featureMenu );
+    this.menuList.push( application );
+    this.menuList.push( extensionsMenu );
+  }
 
+  getConfiguration() {
+    return this.menuList;
+  }
 
-    return menuList;
+  getUserSetting() {
+    return this.userSetting;
+  }
+
+  getworkspaceSetting() {
+    return this.workspaceSetting;
   }
 }
