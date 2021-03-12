@@ -1,3 +1,9 @@
+/* Remove default link style */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Remove default bullets */
 ul {
   list-style-type: none;

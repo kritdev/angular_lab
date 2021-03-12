@@ -5,7 +5,7 @@
       [class.caret-down]="showSubmenu"
       [class.caret-none]="!hasSubmenu()"
       [class.selected]="isSelected">
-      {{configurationMenu.menu}}
+      <a [href]="'#' + configurationMenu.getMenuId()">{{configurationMenu.menu}}</a>
     </span>
   <ul class="nested" [class.active]="showSubmenu"
     *ngIf='configurationMenu.subMenuList'>

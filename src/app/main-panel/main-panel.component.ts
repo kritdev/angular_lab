@@ -24,7 +24,7 @@ export class MainPanelComponent implements OnInit {
     let configItemList = [];
     configurationMenuList.forEach(config => {
       //append item for menu
-      configItemList.push(new ConfigurationItem(config.menu, config.menu, '', true));
+      configItemList.push(new ConfigurationItem(config.getMenuId(), config.menu, '', true));
 
       //append item for menu's items
       configItemList = configItemList.concat(config.itemList);

@@ -6,4 +6,8 @@ export class ConfigurationMenu {
     public itemList: ConfigurationItem[], 
     public subMenuList: ConfigurationMenu[]) {
     }
+
+  getMenuId() {
+    return this.menu.replace(/\s/g, "");
+  }
 }
