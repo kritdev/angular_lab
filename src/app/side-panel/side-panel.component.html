@@ -1,7 +1,7 @@
 <div class="sidebar-sticky pt-3">
   <ul id="myUL">
     <app-configuration-menu
-      *ngFor='let configurationMenu of configList'
+      *ngFor='let configurationMenu of configurationMenuList'
       [configurationMenu]="configurationMenu"
       [menuLevel]="0"
       (OnSelected)="selectMenu($event)">

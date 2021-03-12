@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Configuration } from './models/configuration';
+import { ConfigurationMenu } from './models/configuration-menu';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-lab';
+  configurationMenuList: ConfigurationMenu[] = new Configuration().getConfiguration();
 }

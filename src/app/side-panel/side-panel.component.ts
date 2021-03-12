@@ -1,4 +1,4 @@
-import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { ConfigurationMenuComponent } from '../components/configuration-menu/configuration-menu.component';
 import { Configuration } from '../models/configuration';
 import { ConfigurationMenu } from '../models/configuration-menu';
@@ -12,7 +12,8 @@ export class SidePanelComponent implements OnInit {
   @ViewChildren(ConfigurationMenuComponent)
   configComponentList: QueryList<ConfigurationMenuComponent>;
   
-  configList: ConfigurationMenu[] = new Configuration().getConfiguration();
+  @Input()
+  configurationMenuList: ConfigurationMenu[]; // = new Configuration().getConfiguration();
 
   constructor() { }
 

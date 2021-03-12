@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Configuration } from '../models/configuration';
 import { ConfigurationItem } from '../models/configuration-item';
 import { ConfigurationMenu } from '../models/configuration-menu';
@@ -10,7 +10,8 @@ import { ConfigurationMenu } from '../models/configuration-menu';
 })
 export class MainPanelComponent implements OnInit {
 
-  configList: ConfigurationMenu[] = new Configuration().getConfiguration();
+  @Input()
+  configurationMenuList: ConfigurationMenu[]; //= new Configuration().getConfiguration();
   
   constructor() { }
 
