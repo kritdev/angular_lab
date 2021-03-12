@@ -3,11 +3,9 @@
   [class.active]="isSeleted">
   <a 
     class="nav-link" 
-    [class.active]="isSeleted" href="#">
+    [class.active]="isSeleted"
+    (click)="selectMenu()" 
+    href="#">
     {{title}}
   </a>
 </li>
-
-<!-- <li class="nav-item active">
-  <a class="nav-link active" href="#">Active</a>
-</li> -->

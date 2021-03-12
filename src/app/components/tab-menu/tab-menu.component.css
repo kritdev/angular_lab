@@ -1,3 +1,10 @@
 a {
   color: rgb(123, 123, 123);
 }
+.nav-link.active {
+  color: rgb(112, 112, 112);
+  font-weight: bold;
+}
+.nav-item.active {
+  border-bottom: 1px solid rgb(112, 112, 112);
+}
