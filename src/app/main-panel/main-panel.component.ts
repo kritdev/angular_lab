@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Configuration } from '../models/configuration';
 import { ConfigurationItem } from '../models/configuration-item';
 import { ConfigurationMenu } from '../models/configuration-menu';
+import { SettingConfig } from '../models/setting-config';
 
 @Component({
   selector: 'app-main-panel',
@@ -11,8 +11,11 @@ import { ConfigurationMenu } from '../models/configuration-menu';
 export class MainPanelComponent implements OnInit {
 
   @Input()
-  configurationMenuList: ConfigurationMenu[]; //= new Configuration().getConfiguration();
+  configurationMenuList: ConfigurationMenu[];
   
+  @Input()
+  settingConfig : SettingConfig;
+
   constructor() { }
 
   ngOnInit(): void {

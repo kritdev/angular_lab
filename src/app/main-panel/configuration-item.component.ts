@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ConfigurationItem } from 'src/app/models/configuration-item';
 import { SettingConfig } from 'src/app/models/setting-config';
+import { UserSettingConfig } from 'src/app/models/user-setting-config';
 
 @Component({
   selector: 'app-configuration-item',
@@ -12,7 +13,7 @@ export class ConfigurationItemComponent implements OnInit {
   configurationItem: ConfigurationItem;
 
   @Input()
-  settingConfig : SettingConfig;
+  settingConfig : SettingConfig;// = new UserSettingConfig();
 
   constructor() { }
 
