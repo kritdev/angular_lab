@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Configuration } from './models/configuration';
 import { ConfigurationMenu } from './models/configuration-menu';
+import { SettingConfig } from './models/setting-config';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,14 @@ import { ConfigurationMenu } from './models/configuration-menu';
 })
 export class AppComponent {
   title = 'angular-lab';
-  configurationMenuList: ConfigurationMenu[] = new Configuration().getConfiguration();
+  configuration: Configuration = new Configuration();
+  configurationMenuList: ConfigurationMenu[] = this.configuration.getConfiguration();
+  settingConfig: SettingConfig = this.configuration.getUserSetting();
+
+  constructor() {
+  }
+
+  changeSetting(newSetting:SettingConfig) {
+    this.settingConfig = newSetting;
+  }
 }

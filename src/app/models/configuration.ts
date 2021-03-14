@@ -1,31 +1,15 @@
 import { ConfigurationItem } from "./configuration-item";
 import { ConfigurationMenu } from "./configuration-menu";
+import { UserSettingConfig } from "./user-setting-config";
+import { WorkspaceSettingConfig } from "./workspace-setting-config";
 
 export class Configuration {
   menuList: ConfigurationMenu[] = [];
-  userSetting = {};
-  workspaceSetting = {};
+  workspaceSettingConfig = new WorkspaceSettingConfig();
+  userSettingConfig = new UserSettingConfig();
 
   constructor () {
     this.createMenuList();
-    this.createUserSetting();
-    this.createWorkspaceSetting();
-  }
-
-  public createUserSetting() {
-    this.userSetting = {
-      'file.autoSave': 'true',
-      'editor.fontSize': '16',
-      'autoClosingBrackets': 'false'
-    }
-  }
-
-  public createWorkspaceSetting() {
-    this.workspaceSetting = {
-      'file.autoSave': 'false',
-      'editor.fontSize': '16',
-      'autoClosingBrackets': 'true'
-    }
   }
 
   public createMenuList() {
@@ -82,10 +66,10 @@ export class Configuration {
   }
 
   getUserSetting() {
-    return this.userSetting;
+    return this.userSettingConfig;
   }
 
   getworkspaceSetting() {
-    return this.workspaceSetting;
+    return this.workspaceSettingConfig;
   }
 }

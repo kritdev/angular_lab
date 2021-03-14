@@ -1,6 +1,15 @@
 <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
   <ul class="nav">
-    <app-tab-menu [title]="'User Settings'" (OnSelected)="selectMenu($event)"></app-tab-menu>
-    <app-tab-menu [title]="'Workspace Settings'" (OnSelected)="selectMenu($event)"></app-tab-menu>
+    <app-tab-menu 
+      [title]="'User Settings'"
+      [settingConfig]="configuration.getUserSetting()" 
+      [isSeleted]="true"
+      (OnSelected)="selectMenu($event)">
+    </app-tab-menu>
+    <app-tab-menu 
+      [title]="'Workspace Settings'"
+      [settingConfig]="configuration.getworkspaceSetting()" 
+      (OnSelected)="selectMenu($event)">
+    </app-tab-menu>
   </ul>
 </nav>
