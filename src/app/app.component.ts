@@ -10,8 +10,9 @@ import { SettingConfig } from './models/setting-config';
 })
 export class AppComponent {
   title = 'angular-lab';
-  configurationMenuList: ConfigurationMenu[] = new Configuration().getConfiguration();
-  settingConfig: SettingConfig = new Configuration().getUserSetting();
+  configuration: Configuration = new Configuration();
+  configurationMenuList: ConfigurationMenu[] = this.configuration.getConfiguration();
+  settingConfig: SettingConfig = this.configuration.getUserSetting();
 
   constructor() {
     

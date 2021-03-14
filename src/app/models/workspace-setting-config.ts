@@ -5,7 +5,7 @@ export class WorkspaceSettingConfig extends SettingConfig{
     super();
     this.setting = {
       'file.autoSave': 'false',
-      'editor.fontSize': '16',
+      'editor.fontSize': '14',
       'autoClosingBrackets': 'true'
     }
   }
