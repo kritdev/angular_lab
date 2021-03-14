@@ -1,19 +1,17 @@
-<div 
-  class="configuration-item"
-  [id]="configurationItem.id">
+<div [id]="configurationItem.id">
   <div *ngIf="configurationItem.isHeader"
-    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom">
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom item-hover">
     <h3>{{getConfigItemName()}}</h3>
   </div>
 
   <div *ngIf="!configurationItem.isHeader"
-  class="justify-content-between pt-3 pb-2">
-  <div>
-    {{getConfigItemGroup()}} <b>{{getConfigItemName()}}</b>
-  </div>
-  <div>
-    {{configurationItem.description}}
-  </div>
-  <input type="text" [value]="getConfigValue()" (change)="setConfigValue($event)">
+    class="justify-content-between pt-3 pb-2 item-hover">
+    <div>
+      {{getConfigItemGroup()}} <b>{{getConfigItemName()}}</b>
+    </div>
+    <div>
+      {{configurationItem.description}}
+    </div>
+    <input type="text" [value]="getConfigValue()" (change)="setConfigValue($event)">
   </div>
 </div>
