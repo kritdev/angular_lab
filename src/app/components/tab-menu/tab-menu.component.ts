@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SettingConfig } from 'src/app/models/setting-config';
 
 @Component({
   selector: 'app-tab-menu',
@@ -8,6 +9,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class TabMenuComponent implements OnInit {
   @Input()
   title: String;
+
+  @Input()
+  settingConfig: SettingConfig;
 
   @Output()
   OnSelected: EventEmitter<TabMenuComponent> = new EventEmitter();

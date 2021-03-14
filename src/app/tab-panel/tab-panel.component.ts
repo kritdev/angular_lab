@@ -1,5 +1,7 @@
-import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, QueryList, ViewChildren } from '@angular/core';
 import { TabMenuComponent } from '../components/tab-menu/tab-menu.component';
+import { Configuration } from '../models/configuration';
+import { SettingConfig } from '../models/setting-config';
 
 @Component({
   selector: 'app-tab-panel',
@@ -7,6 +9,12 @@ import { TabMenuComponent } from '../components/tab-menu/tab-menu.component';
   styleUrls: ['./tab-panel.component.css']
 })
 export class TabPanelComponent implements OnInit {
+  @Input()
+  configuration: Configuration;
+  
+  @Output()
+  OnChangeSetting: EventEmitter<SettingConfig> = new EventEmitter();
+
   @ViewChildren(TabMenuComponent)
   tabMenuComponentList: QueryList<TabMenuComponent>;
 
@@ -18,6 +26,8 @@ export class TabPanelComponent implements OnInit {
   selectMenu(tabMenuComponent: TabMenuComponent) {
     this.tabMenuComponentList.forEach( item => item.isSeleted = false );
     tabMenuComponent.isSeleted = true;
+
+    this.OnChangeSetting.emit(tabMenuComponent.settingConfig);
   }
 
 }

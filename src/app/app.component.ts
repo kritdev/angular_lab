@@ -15,6 +15,9 @@ export class AppComponent {
   settingConfig: SettingConfig = this.configuration.getUserSetting();
 
   constructor() {
-    
+  }
+
+  changeSetting(newSetting:SettingConfig) {
+    this.settingConfig = newSetting;
   }
 }
