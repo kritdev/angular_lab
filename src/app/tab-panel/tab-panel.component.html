@@ -3,6 +3,7 @@
     <app-tab-menu 
       [title]="'User Settings'"
       [settingConfig]="configuration.getUserSetting()" 
+      [isSeleted]="true"
       (OnSelected)="selectMenu($event)">
     </app-tab-menu>
     <app-tab-menu 

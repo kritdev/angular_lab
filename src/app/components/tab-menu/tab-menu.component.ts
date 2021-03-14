@@ -13,10 +13,12 @@ export class TabMenuComponent implements OnInit {
   @Input()
   settingConfig: SettingConfig;
 
+  @Input()
+  isSeleted: Boolean;
+
   @Output()
   OnSelected: EventEmitter<TabMenuComponent> = new EventEmitter();
 
-  isSeleted: Boolean;
 
   constructor() { }
 
