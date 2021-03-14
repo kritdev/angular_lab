@@ -9,7 +9,20 @@ export class BackendService {
   constructor() { }
 
   getProducts(): Product[] {
-    return [];
+    return [
+      {
+        name: 'ส้มโอ',
+        price: 111
+      },
+      {
+        name: 'แตงโม',
+        price: 222
+      },
+      {
+        name: 'มะพร้าวนํ้าหอม',
+        price: 333
+      }
+    ];
   }
   
   getProductById (productId: number): Product {
