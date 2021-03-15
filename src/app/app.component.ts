@@ -8,12 +8,4 @@ import { BackendService } from './backend.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // @ViewChild('productList', {static: true})
-  // productList: ProductListComponent;
-
-  // constructor(private backendService: BackendService) {}
-  
-  // ngOnInit() {
-  //   this.productList.products = this.backendService.getProducts();
-  // }
 }
