@@ -5,6 +5,7 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { PanelComponent } from './panel/panel.component'; 
 
 import { BackendService } from '../backend.service';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { BackendService } from '../backend.service';
     ProductListComponent,
     ProductItemComponent,
     PanelComponent,
-    // ProductDetailComponent
+    ProductDetailComponent
   ],
   imports: [
     CommonModule

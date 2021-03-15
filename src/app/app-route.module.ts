@@ -5,6 +5,7 @@ import { HomeComponent } from "./home/home/home.component";
 import { LoginComponent } from "./login/login.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { ProductListComponent } from "./catalog/product-list/product-list.component";
+import { ProductDetailComponent } from "./catalog/product-detail/product-detail.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductListComponent
+  },
+  {
+    path: 'products/:id',
+    component: ProductDetailComponent
   },
   {
     path: '**',
