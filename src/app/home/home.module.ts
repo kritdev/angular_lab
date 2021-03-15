@@ -9,6 +9,10 @@ import { MainContentComponent } from './main-content/main-content.component';
   declarations: [NavbarComponent, MainContentComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    NavbarComponent,
+    MainContentComponent
   ]
 })
 export class HomeModule { }
