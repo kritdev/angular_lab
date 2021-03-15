@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductItemComponent } from './product-item/product-item.component'; 
+import { ProductItemComponent } from './product-item/product-item.component';
+import { PanelComponent } from './panel/panel.component'; 
 
 import { BackendService } from '../backend.service';
 
@@ -10,7 +11,7 @@ import { BackendService } from '../backend.service';
   declarations: [
     ProductListComponent,
     ProductItemComponent,
-    // PanelComponent,
+    PanelComponent,
     // ProductDetailComponent
   ],
   imports: [
