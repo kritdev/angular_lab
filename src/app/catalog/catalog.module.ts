@@ -13,8 +13,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductListComponent,
     ProductItemComponent,
     PanelComponent,
-    ProductDetailComponent,
-    // ProductDetailComponent
+    ProductDetailComponent
   ],
   imports: [
     CommonModule
