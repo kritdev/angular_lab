@@ -21,4 +21,8 @@ export class MyFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submitForm() {
+    alert(JSON.stringify(this.form.value));
+  }
+
 }
