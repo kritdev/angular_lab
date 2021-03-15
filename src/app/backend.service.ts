@@ -26,6 +26,9 @@ export class BackendService {
   }
   
   getProductById (productId: number): Product {
-    return;
+    return {
+      name: 'Product ID: ' + productId,
+      price: 555
+    };
     }
 }
