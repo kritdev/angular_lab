@@ -10,7 +10,8 @@ import { ProductDetailComponent } from "./catalog/product-detail/product-detail.
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    pathMatch: 'full',
+    redirectTo: 'home'
   },
   {
     path: 'home',
