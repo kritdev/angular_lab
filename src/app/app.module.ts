@@ -4,10 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
+import { SubmitFormComponent } from './submit-form/submit-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SubmitFormComponent
   ],
   imports: [
     BrowserModule,
