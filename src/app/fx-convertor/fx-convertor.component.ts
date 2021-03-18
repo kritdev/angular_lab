@@ -24,18 +24,16 @@ export class FxConvertorComponent implements OnInit {
   }
 
   convert() {
-    let fromCurrency = 'THB';
-    let toCurrency = 'USD';
+    let fromCurrency = this.form.value.fromCurrency;
+    let toCurrency = this.form.value.toCurrency;
     let fxRate = 0.0;
 
     this.httpClient
     .get(`https://api.exchangeratesapi.io/latest?symbols=${fromCurrency},${toCurrency}`)
     .subscribe(result => {
       this.fxData = result as any[];
-      console.log(this.fxData);
-
-      fxRate = this.fxData['rates'][fromCurrency] / this.fxData['rates'][toCurrency];
-      console.log(fxRate);
+      fxRate = this.fxData['rates'][toCurrency] / this.fxData['rates'][fromCurrency];
+      this.form.patchValue({toAmount: this.form.value.fromAmount * fxRate});
     });
   }
 }
