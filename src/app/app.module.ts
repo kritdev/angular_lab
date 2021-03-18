@@ -4,10 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
+import { FxConvertorComponent } from './fx-convertor/fx-convertor.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FxConvertorComponent
   ],
   imports: [
     BrowserModule,
