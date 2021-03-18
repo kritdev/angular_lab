@@ -26,3 +26,9 @@ label {
 div.display-contents {
   display: contents;
 }
+
+label.required::after {
+  content: '*';
+  color: #dc3545;
+  margin-left: 0.2rem;
+}

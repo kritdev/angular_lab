@@ -2,14 +2,14 @@
   <div class="card mx-auto py-4 px-3 my-5" style="width: 480px;">
    <form [formGroup]="form"> 
        <div class="form-group col-lg-6"> 
-        <label for="name">Name</label> 
-        <input class="form-control" placeholder="Your answer" id="name" formControlName="name">
+        <label [class.required]="isRequired('name')" for="name">Name</label> 
+        <input class="form-control" [class.required]="true" placeholder="Your answer" id="name" formControlName="name">
         <div class="invalid-feedback" [class.display-contents]="form.get('name').errors?.required && form.get('name').touched">
           This field is required.
         </div>
       </div> 
       <div class="form-group col-lg-6"> 
-        <label for="email">Email</label>
+        <label [class.required]="isRequired('email')" for="email">Email</label>
         <input class="form-control" placeholder="Your answer" id="email" formControlName="email" type="email">
         <div class="invalid-feedback" [class.display-contents]="form.get('email').errors?.required && form.get('email').touched">
           This field is required.
@@ -19,14 +19,14 @@
         </div>
       </div> 
       <div class="form-group col-lg-12"> 
-        <label for="postalAddress">Postal Address</label>
+        <label [class.required]="isRequired('postalAddress')" for="postalAddress">Postal Address</label>
         <input class="form-control" placeholder="Your answer" id="postalAddress" formControlName="postalAddress">
         <div class="invalid-feedback" [class.display-contents]="form.get('postalAddress').errors?.required && form.get('postalAddress').touched">
           This field is required.
         </div>
       </div> 
       <div class="form-group col-lg-12"> 
-        <label for="comments">Comments</label>
+        <label [class.required]="isRequired('comments')" for="comments">Comments</label>
         <input class="form-control" placeholder="Your answer" id="comments" formControlName="comments"> 
       </div> 
       <div class="form-group col-lg-12"> 

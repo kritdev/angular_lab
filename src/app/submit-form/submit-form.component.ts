@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-submit-form',
@@ -23,5 +23,10 @@ export class SubmitFormComponent implements OnInit {
 
   submitForm() {
     
+  }
+
+  isRequired(fieldName) {
+    const validator = this.form.get(fieldName).validator({} as AbstractControl);
+    return validator && validator.required;
   }
 }
