@@ -22,3 +22,7 @@ label {
   padding-top: 8px;
   font-weight: 500;
 }
+
+div.display-contents {
+  display: contents;
+}
