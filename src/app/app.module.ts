@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatButtonModule } from '@angular/material/button';
@@ -19,7 +20,7 @@ import { FxConvertorComponent } from './fx-convertor/fx-convertor.component';
     FormsModule, ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DecimalPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

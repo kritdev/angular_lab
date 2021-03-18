@@ -6,10 +6,10 @@
         <label class="font-weight-bold">From:</label>
        </div>
        <div class="col-lg-5">
-        <input class="form-control" placeholder="amount" formControlName="fromAmount">
+        <input class="form-control text-right" placeholder="amount" formControlName="fromAmount">
        </div>
        <div class="col-lg-4">
-        <input class="form-control" placeholder="Currency" formControlName="fromCurrency">
+        <input class="form-control" placeholder="Currency" formControlName="fromCurrency" maxlength="3" oninput="this.value = this.value.toUpperCase()">
        </div>
      </div>
      <div class="row my-2">
@@ -17,10 +17,10 @@
         <label class="font-weight-bold">To:</label>
        </div>
        <div class="col-lg-5">
-        <input class="form-control" placeholder="amount" formControlName="toAmount" disabled>
+        <input class="form-control text-right" placeholder="amount" formControlName="toAmount" disabled>
        </div>
        <div class="col-lg-4">
-        <input class="form-control" placeholder="Currency" formControlName="toCurrency">
+        <input class="form-control" placeholder="Currency" formControlName="toCurrency" maxlength="3" oninput="this.value = this.value.toUpperCase()">
        </div>
      </div>
      <div class="row">

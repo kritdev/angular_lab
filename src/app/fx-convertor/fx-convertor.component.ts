@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { DecimalPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { throwError } from 'rxjs';
@@ -13,7 +14,10 @@ export class FxConvertorComponent implements OnInit {
   form: FormGroup;
   fxData: any[];
 
-  constructor(private fb: FormBuilder, private httpClient: HttpClient) { 
+  constructor(
+    private fb: FormBuilder, 
+    private httpClient: HttpClient,
+    private decimalPipe: DecimalPipe) { 
     this.form = this.fb.group({ 
       fromCurrency: ['', Validators.required], 
       fromAmount: ['', Validators.required], 
@@ -42,7 +46,9 @@ export class FxConvertorComponent implements OnInit {
       result => {
         this.fxData = result as any[];
         fxRate = this.fxData['rates'][toCurrency] / this.fxData['rates'][fromCurrency];
-        this.form.patchValue({toAmount: this.form.value.fromAmount * fxRate});
+        this.form.patchValue({
+          toAmount: this.decimalPipe.transform((this.form.value.fromAmount * fxRate).toFixed(2))
+        });
       }, 
       err => {alert(err)}
     );
