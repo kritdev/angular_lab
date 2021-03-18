@@ -1,23 +1,23 @@
 <div>
-  <div class="card mx-auto p-3 my-5" style="width: 480px;">
+  <div class="card mx-auto py-4 px-3 my-5" style="width: 480px;">
    <form [formGroup]="form"> 
-       <div class="form-group"> 
+       <div class="form-group col-lg-6"> 
         <label for="name">Name</label> 
         <input class="form-control" placeholder="Your answer" id="name" formControlName="name"> 
       </div> 
-      <div class="form-group"> 
+      <div class="form-group col-lg-6"> 
         <label for="email">Email</label>
         <input class="form-control" placeholder="Your answer" id="email" formControlName="email" type="email"> 
       </div> 
-      <div class="form-group"> 
+      <div class="form-group col-lg-12"> 
         <label for="postalAddress">Postal Address</label>
         <input class="form-control" placeholder="Your answer" id="postalAddress" formControlName="postalAddress"> 
       </div> 
-      <div class="form-group"> 
+      <div class="form-group col-lg-12"> 
         <label for="comments">Comments</label>
         <input class="form-control" placeholder="Your answer" id="comments" formControlName="comments"> 
       </div> 
-      <div class="form-group"> 
+      <div class="form-group col-lg-12"> 
         <button
           class="btn btn-primary"
           [disabled]="form.invalid" 

@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   height: calc(1.5em + 2rem);
-  padding: 0.5rem 0;
+  padding: 0.25rem 0;
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.5;
@@ -19,5 +19,6 @@
 label {
   display: block;
   margin: 0px;
+  padding-top: 8px;
   font-weight: 500;
 }
