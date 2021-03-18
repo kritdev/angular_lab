@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FxConvertorComponent implements OnInit {
   form: FormGroup;
-  fxRate: any[];
+  fxData: any[];
 
   constructor(private fb: FormBuilder, private httpClient: HttpClient) { 
     this.form = this.fb.group({ 
@@ -24,10 +24,18 @@ export class FxConvertorComponent implements OnInit {
   }
 
   convert() {
+    let fromCurrency = 'THB';
+    let toCurrency = 'USD';
+    let fxRate = 0.0;
+
     this.httpClient
-    .get(`https://api.exchangeratesapi.io/latest?symbols=USD,THB`)
+    .get(`https://api.exchangeratesapi.io/latest?symbols=${fromCurrency},${toCurrency}`)
     .subscribe(result => {
-      this.fxRate = result as any[];
+      this.fxData = result as any[];
+      console.log(this.fxData);
+
+      fxRate = this.fxData['rates'][fromCurrency] / this.fxData['rates'][toCurrency];
+      console.log(fxRate);
     });
   }
 }
