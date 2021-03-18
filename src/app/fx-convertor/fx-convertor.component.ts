@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -8,8 +9,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FxConvertorComponent implements OnInit {
   form: FormGroup;
+  fxRate: any[];
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, private httpClient: HttpClient) { 
     this.form = this.fb.group({ 
       fromCurrency: ['', Validators.required], 
       fromAmount: ['', Validators.required], 
@@ -22,6 +24,10 @@ export class FxConvertorComponent implements OnInit {
   }
 
   convert() {
-
+    this.httpClient
+    .get(`https://api.exchangeratesapi.io/latest?symbols=USD,THB`)
+    .subscribe(result => {
+      this.fxRate = result as any[];
+    });
   }
 }

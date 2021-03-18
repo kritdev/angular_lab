@@ -33,42 +33,7 @@
         </button>
       </div>
      </div>
-   <!--     <div class="form-group col-lg-6"> 
-        <label [class.required]="isRequired('name')" for="name">Name</label> 
-        <input class="form-control" [class.required]="true" placeholder="Your answer" id="name" formControlName="name">
-        <div class="invalid-feedback" [class.display-contents]="form.get('name').errors?.required && form.get('name').touched">
-          This field is required.
-        </div>
-      </div> 
-      <div class="form-group col-lg-6"> 
-        <label [class.required]="isRequired('email')" for="email">Email</label>
-        <input class="form-control" placeholder="Your answer" id="email" formControlName="email" type="email">
-        <div class="invalid-feedback" [class.display-contents]="form.get('email').errors?.required && form.get('email').touched">
-          This field is required.
-        </div>
-        <div class="invalid-feedback" [class.display-contents]="form.get('email').errors?.email && form.get('email').touched">
-          Email is invalid.
-        </div>
-      </div> 
-      <div class="form-group col-lg-12"> 
-        <label [class.required]="isRequired('postalAddress')" for="postalAddress">Postal Address</label>
-        <input class="form-control" placeholder="Your answer" id="postalAddress" formControlName="postalAddress">
-        <div class="invalid-feedback" [class.display-contents]="form.get('postalAddress').errors?.required && form.get('postalAddress').touched">
-          This field is required.
-        </div>
-      </div> 
-      <div class="form-group col-lg-12"> 
-        <label [class.required]="isRequired('comments')" for="comments">Comments</label>
-        <input class="form-control" placeholder="Your answer" id="comments" formControlName="comments"> 
-      </div> 
-      <div class="form-group col-lg-12"> 
-        <button
-          class="btn btn-primary"
-          [disabled]="form.invalid" 
-          (click)="submitForm()">
-          SUBMIT
-        </button>
-      </div>   -->
     </form>
+    {{fxRate | json}}
   </div>
 </div>
