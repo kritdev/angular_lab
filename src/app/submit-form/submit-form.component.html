@@ -1,1 +1,30 @@
-<p>submit-form works!</p>
+<div>
+  <div class="card mx-auto p-3 my-5" style="width: 480px;">
+   <form [formGroup]="form"> 
+       <div class="form-group"> 
+        <label for="name">Name</label> 
+        <input class="form-control" placeholder="Your answer" id="name" formControlName="name"> 
+      </div> 
+      <div class="form-group"> 
+        <label for="email">Email</label>
+        <input class="form-control" placeholder="Your answer" id="email" formControlName="email"> 
+      </div> 
+      <div class="form-group"> 
+        <label for="postalAddress">Postal Address</label>
+        <input class="form-control" placeholder="Your answer" id="postalAddress" formControlName="postalAddress"> 
+      </div> 
+      <div class="form-group"> 
+        <label for="comments">Comments</label>
+        <input class="form-control" placeholder="Your answer" id="comments" formControlName="comments"> 
+      </div> 
+      <div class="form-group"> 
+        <button
+          class="btn btn-primary"
+          [disabled]="form.invalid" 
+          (click)="submitForm()">
+          SUBMIT
+        </button> 
+      </div>
+    </form> 
+  </div>
+</div>
