@@ -2,26 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### [Part03_Lab03](https://github.com/kritdev/angular_lab/tree/Part03_Lab03)
+Using Routing
+<br><br>
+### [Part03_Lab04](https://github.com/kritdev/angular_lab/tree/Part03_Lab04)
+Install Angular Material
+<br><br>
+### [Part03_Lab04.1](https://github.com/kritdev/angular_lab/tree/Part03_Lab04.1)
+Test Angular Material UI
+<br><br>
+### [Part04_Lab01](https://github.com/kritdev/angular_lab/tree/Part04_Lab01)
+Form: Implement Reactive Forms
+<br><br>
+### [Part04_Lab02](https://github.com/kritdev/angular_lab/tree/Part04_Lab02)
+Form: Implement validation and submit button
+<br><br>
+### [Part04_Lab03](https://github.com/kritdev/angular_lab/tree/Part04_Lab03)
+Server-side communication: Using HttpClient
+<br><br>
+### [Part04_Lab04](https://github.com/kritdev/angular_lab/tree/Part04_Lab04)
+Server-side communication: Calling POST Api.
+<br><br>
+### [Customize-Bootstrap](https://github.com/kritdev/angular_lab/tree/customize-bootstrap)
+Customizing bootstrap in Angular Project
