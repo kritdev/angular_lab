@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
+
+### [Part02_homework3](https://github.com/kritdev/angular_lab/tree/Part02_homework3)
+VS Code Setting Screen
+<br><br>
 ### [Part03_Lab03](https://github.com/kritdev/angular_lab/tree/Part03_Lab03)
 Using Routing
 <br><br>
