@@ -1,8 +1,12 @@
-<div class="container">
-  <h1 class="text-primary">Test BootStrap</h1>
-  <button class="btn btn-primary">Test Button</button>
-  <button mat-raised-button>Basic</button>
-  <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
-    <mat-icon>bookmark</mat-icon>
-  </button>
+<div class="container-fluid  p-0">
+  <app-sidebar></app-sidebar>
+  <div class="d-flex">
+    <div class="sidebar-width bg-success d-md-block d-none">
+      <!-- for padding main content -->
+    </div>
+    <div class="flex-grow-1">
+      <app-navbar></app-navbar>
+      <app-main></app-main>
+    </div>
+  </div>
 </div>
