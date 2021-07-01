@@ -24,17 +24,17 @@ const TREE_DATA: FoodNode[] = [
     children: [
       {
         name: 'Green',
-        icon: 'menu_book',
+        icon: 'radio_button_checked',
         children: [
-          {name: 'Broccoli', icon: 'menu_book'},
-          {name: 'Brussels sprouts', icon: 'menu_book'},
+          {name: 'Broccoli', icon: 'radio_button_unchecked'},
+          {name: 'Brussels sprouts', icon: 'radio_button_unchecked'},
         ]
       }, {
         name: 'Orange',
-        icon: 'menu_book',
+        icon: 'radio_button_checked',
         children: [
-          {name: 'Pumpkins', icon: 'menu_book'},
-          {name: 'Carrots', icon: 'menu_book'},
+          {name: 'Pumpkins', icon: 'radio_button_unchecked'},
+          {name: 'Carrots', icon: 'radio_button_unchecked'},
         ]
       },
     ]
@@ -59,4 +59,7 @@ export class SidebarComponent implements OnInit {
 
   hasChild = (_: number, node: FoodNode) => !!node.children && node.children.length > 0;
 
+  expandable(node) {
+    return !!node.children && node.children.length > 0;
+  }
 }
