@@ -5,31 +5,36 @@ import {MatTreeNestedDataSource} from '@angular/material/tree';
 
 interface FoodNode {
   name: string;
+  icon: string;
   children?: FoodNode[];
 }
 
 const TREE_DATA: FoodNode[] = [
   {
     name: 'Fruit',
+    icon: 'menu_book',
     children: [
-      {name: 'Apple'},
-      {name: 'Banana'},
-      {name: 'Fruit loops'},
+      {name: 'Apple', icon: 'radio_button_checked'},
+      {name: 'Banana', icon: 'radio_button_checked'},
+      {name: 'Fruit loops', icon: 'radio_button_checked'},
     ]
   }, {
     name: 'Vegetables',
+    icon: 'menu_book',
     children: [
       {
         name: 'Green',
+        icon: 'menu_book',
         children: [
-          {name: 'Broccoli'},
-          {name: 'Brussels sprouts'},
+          {name: 'Broccoli', icon: 'menu_book'},
+          {name: 'Brussels sprouts', icon: 'menu_book'},
         ]
       }, {
         name: 'Orange',
+        icon: 'menu_book',
         children: [
-          {name: 'Pumpkins'},
-          {name: 'Carrots'},
+          {name: 'Pumpkins', icon: 'menu_book'},
+          {name: 'Carrots', icon: 'menu_book'},
         ]
       },
     ]
@@ -53,5 +58,5 @@ export class SidebarComponent implements OnInit {
   }
 
   hasChild = (_: number, node: FoodNode) => !!node.children && node.children.length > 0;
-  
+
 }

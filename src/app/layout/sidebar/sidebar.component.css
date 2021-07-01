@@ -30,9 +30,9 @@ nav > img {
 /*
  * This padding sets alignment of the nested nodes.
  */
-.example-tree .mat-nested-tree-node div[role=group] {
+/* .example-tree .mat-nested-tree-node div[role=group] {
   padding-left: 40px;
-}
+} */
 
 /*
  * Padding for leaf nodes.
@@ -41,4 +41,12 @@ nav > img {
  */
 .example-tree div[role=group] > .mat-tree-node {
   padding-left: 40px;
+}
+
+mat-icon {
+  vertical-align: sub;
+}
+
+.node-name {
+  margin-left: 8px;
 }
