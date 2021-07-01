@@ -1,17 +1,16 @@
-<nav class="sidebar sidebar-width bg-secondary d-md-block d-none"> 
+<!-- 
+  Use this code as an example:
+    https://material.angular.io/components/tree/overview#nested-tree
+ -->
+
+
+<nav class="sidebar sidebar-width d-md-block d-none"> 
   <img src="https://admin-demo.nopcommerce.com/css/admin/images/logo.png" class='a-logo' alt="">
   <hr class="text-light m-0">
   <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
-    <!-- This is the tree node template for leaf nodes -->
-    <!-- There is inline padding applied to this node using styles.
-      This padding value depends on the mat-icon-button width. -->
-    <!-- <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
-        {{node.name}}
-    </mat-tree-node> -->
-    <!-- This is the tree node template for expandable nodes -->
     <mat-nested-tree-node *matTreeNodeDef="let node">
-        <div class="mat-tree-node">
-            <button mat-flat-button matTreeNodeToggle
+        <div class="mat-tree-node menu-item">
+            <div matTreeNodeToggle
                     [attr.aria-label]="'Toggle ' + node.name"
                     class="flex-grow-1">
               <div class="d-flex justify-content-between align-items-center">
@@ -25,7 +24,7 @@
                   </mat-icon>
                 </div>
               </div>
-            </button>
+            </div>
         </div>
         <!-- There is inline padding applied to this div using styles.
             This padding value depends on the mat-icon-button width.  -->
