@@ -8,6 +8,7 @@ import { AboutComponent } from './page/about/about.component';
 import { SkillComponent } from './page/skill/skill.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { PortfolioComponent } from './page/portfolio/portfolio.component';
+import { AppRouteModule } from './app-route/app-route.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PortfolioComponent } from './page/portfolio/portfolio.component';
     PortfolioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRouteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
