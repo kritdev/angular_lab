@@ -2,44 +2,12 @@
 <div class="m-3">
   <div class="row justify-content-center">
     <div class="col-6">
-      <div class="row">
+      <div class="row" *ngFor="let item of data | keyvalue">
         <div class="col-5 column-title">
-          Phone:
+          {{item.key}}
         </div>
         <div class="col-7">
-          66-099-999-9999
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-5 column-title">
-          Email:
-        </div>
-        <div class="col-7">
-          thai.codecamp@gmail.com
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-5 column-title">
-          Line ID:
-        </div>
-        <div class="col-7">
-          codecamp
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-5 column-title">
-          Website:
-        </div>
-        <div class="col-7">
-          www.codecampthailand.com
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-5 column-title">
-          Address:
-        </div>
-        <div class="col-7">
-          99/31 Moo4 Software Park Building, Chaeng Wattana Road, Klong Gleua, Pakkred, Nonthaburi 11120
+          {{item.value}}
         </div>
       </div>
     </div>
