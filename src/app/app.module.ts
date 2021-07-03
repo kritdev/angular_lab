@@ -9,6 +9,7 @@ import { SkillComponent } from './page/skill/skill.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { PortfolioComponent } from './page/portfolio/portfolio.component';
 import { AppRouteModule } from './app-route/app-route.module';
+import { HeaderComponent } from './page/component/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRouteModule } from './app-route/app-route.module';
     AboutComponent,
     SkillComponent,
     ContactComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
