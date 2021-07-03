@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  data = {
-    'Phone:':'66-099-999-9999',
-    'Email:':'thai.codecamp@gmail.com',
-    'Line ID:':'codecamp',
-    'Website:':'www.codecampthailand.com',
-    'Address:':'99/31 Moo4 Software Park Building, Chaeng Wattana Road, Klong Gleua, Pakkred, Nonthaburi 11120'
-  }
+  data = [
+    {title:'Phone:', description:'66-099-999-9999'},
+    {title:'Email:', description:'thai.codecamp@gmail.com'},
+    {title:'Line ID:', description:'codecamp'},
+    {title:'Website:', description:'www.codecampthailand.com'},
+    {title:'Address:', description:'99/31 Moo4 Software Park Building, Chaeng Wattana Road, Klong Gleua, Pakkred, Nonthaburi 11120'}
+  ]
 
   constructor() { }
 
