@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillComponent implements OnInit {
 
+  skillList = [
+    'Javascript',
+    'HTLM',
+    'MySQL',
+    'NodeJs',
+    'Koa',
+    'Cloud Deployment',
+    'Algorithm: Data Structure'
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
