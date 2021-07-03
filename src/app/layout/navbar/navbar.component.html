@@ -1,6 +1,6 @@
-<nav class="nav">
-  <a class="nav-link" [routerLink]="['/about']">About me</a>
-  <a class="nav-link" [routerLink]="['/skill']">Skill</a>
-  <a class="nav-link" [routerLink]="['/contact']">Contact Me</a>
-  <a class="nav-link" [routerLink]="['/portfolio']">Portfolio</a>
+<nav class="nav nav-pills nav-fill">
+  <a class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/about']">About me</a>
+  <a class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/skill']">Skill</a>
+  <a class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/contact']">Contact Me</a>
+  <a class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/portfolio']">Portfolio</a>
 </nav>
