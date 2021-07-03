@@ -1,1 +1,8 @@
-<p>portfolio works!</p>
+<app-header [title]="'Portfolio'"></app-header>
+<div class="d-flex m-3 flex-wrap">
+  <app-product 
+    *ngFor="let item of productList"
+    [product]="item"
+    class="col-sm-12 col-lg-6"
+    ></app-product>
+</div>

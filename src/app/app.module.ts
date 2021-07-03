@@ -10,6 +10,7 @@ import { ContactComponent } from './page/contact/contact.component';
 import { PortfolioComponent } from './page/portfolio/portfolio.component';
 import { AppRouteModule } from './app-route/app-route.module';
 import { HeaderComponent } from './page/component/header/header.component';
+import { ProductComponent } from './page/product/product.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './page/component/header/header.component';
     SkillComponent,
     ContactComponent,
     PortfolioComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
