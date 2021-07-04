@@ -24,6 +24,10 @@ nav > img {
   list-style-type: none;
 }
 
+mat-tree {
+  background: transparent;
+}
+
 mat-icon {
   vertical-align: sub;
 }
@@ -42,36 +46,37 @@ mat-icon {
   background-color: rgba(255,255,255,.1);
 }
 
+/* ******************************************************************** */
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(200,200,200,1);
+  border-radius: 10px;
+} */
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color:#fff;
+  -webkit-box-shadow: inset 0 0 6px rgba(90,90,90,0.7);
+}
 
 /* ******************************************************************** */
 
-.test-nav {
+.nav-item-group {
   height: calc(100vh - (3.5rem + 1px));
   position: relative;
 }
 
-.os-padding {
-    box-sizing: inherit;
-    direction: inherit;
-    position: absolute;
-    overflow: visible;
-    padding: 0;
-    margin: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: auto!important;
-    height: auto!important;
-}
-
 .os-viewport {
-  direction: inherit!important;
-  box-sizing: inherit!important;
-  resize: none!important;
-  outline: 0!important;
+  /* direction: inherit!important; */
+  /* box-sizing: inherit!important; */
+  /* resize: none!important; */
+  /* outline: 0!important; */
   position: absolute;
-  /* overflow: hidden;   */
   top: 0;
   left: 0;
   bottom: 0;
@@ -81,4 +86,3 @@ mat-icon {
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
 }
-
