@@ -1,10 +1,12 @@
-<app-header 
-  [title]="'About Me'"
-  [title_image]="data.imageUrl">
-</app-header>
-<div class="m-3">
-  <p style="text-indent: 50px;">
-    {{data.description}}
-  </p>
+<div *ngIf="data">
+  <app-header 
+    [title]="'About Me'"
+    [title_image]="data.imageUrl">
+  </app-header>
+  <div class="m-3">
+    <p style="text-indent: 50px;">
+      {{data.description}}
+    </p>
+  </div>
 </div>
 

@@ -8,7 +8,7 @@ import { DataService } from 'src/app/data.service';
 })
 export class AboutComponent implements OnInit {
 
-  data = {}
+  data = null;
 
   constructor(private dataService: DataService) { }
 
