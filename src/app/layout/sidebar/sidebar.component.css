@@ -1,0 +1,88 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #212529;;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+nav > img {
+  width: 225px;
+  margin: 5px 10px;
+}
+
+/* ********************************************* */
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+mat-tree {
+  background: transparent;
+}
+
+mat-icon {
+  vertical-align: sub;
+}
+
+.node-name {
+  margin-left: 8px;
+}
+
+.menu-item {
+  padding: 4px 16px;
+  color: rgb(194, 199, 208);
+}
+
+.menu-item:hover {
+  color: white;
+  background-color: rgba(255,255,255,.1);
+}
+
+/* ******************************************************************** */
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(200,200,200,1);
+  border-radius: 10px;
+} */
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color:#fff;
+  -webkit-box-shadow: inset 0 0 6px rgba(90,90,90,0.7);
+}
+
+/* ******************************************************************** */
+
+.nav-item-group {
+  height: calc(100vh - (3.5rem + 1px));
+  position: relative;
+}
+
+.os-viewport {
+  /* direction: inherit!important; */
+  /* box-sizing: inherit!important; */
+  /* resize: none!important; */
+  /* outline: 0!important; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
