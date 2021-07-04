@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-skill',
@@ -7,19 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillComponent implements OnInit {
 
-  skillList = [
-    'Javascript',
-    'HTLM',
-    'MySQL',
-    'NodeJs',
-    'Koa',
-    'Cloud Deployment',
-    'Algorithm: Data Structure'
-  ]
+  skillList = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    this.skillList = this.dataService.retrieveSkillList();
   }
 
 }
