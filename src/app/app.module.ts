@@ -7,13 +7,17 @@ import { MaterialModule } from './material/material.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { MainComponent } from './layout/main/main.component';
+import { GroupCardComponent } from './component/group-card/group-card.component';
+import { DetailCardComponent } from './component/detail-card/detail-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SidebarComponent,
-    MainComponent
+    MainComponent,
+    GroupCardComponent,
+    DetailCardComponent
   ],
   imports: [
     BrowserModule,
