@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, Input, OnInit, Type, ViewChild } from '@angular/core';
+import { Component, ComponentFactoryResolver, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { DetailCardItem } from '../detail-card-item';
 import { DetailCardDirective } from '../detail-card.directive';
 import { DetailCardComponent } from '../detail-card/detail-card.component';
@@ -12,27 +12,54 @@ export class GroupCardComponent implements OnInit {
 
   @Input() title = 'card-title';
 
-  @ViewChild(DetailCardDirective, {static: true}) cardDetail!: DetailCardDirective;
+  @ViewChildren(DetailCardDirective) cardDetailList!: QueryList<DetailCardDirective>;
   
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
+  cardItemList: DetailCardItem[];
+
   ngOnInit(): void {
-    this. printConsole();
+    this.cardItemList = [
+      new DetailCardItem(DetailCardComponent, 'dynamic card 1'),
+      new DetailCardItem(DetailCardComponent, 'dynamic card 2'),
+      new DetailCardItem(DetailCardComponent, 'dynamic card 3'),
+    ];
+  }
+
+  ngAfterViewInit() {
+    this.printConsole();
     this.loadComponent();
   }
 
-  loadComponent() {
-    const item = new DetailCardItem(DetailCardComponent, 'dynamic component');
-    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(item.component);
-    const viewContainerRef = this.cardDetail.viewContainerRef;
-    viewContainerRef.clear();
+  ngAfterContentInit() {
+  }
 
-    const componentRef = viewContainerRef.createComponent<DetailCardComponent>(componentFactory);
-    componentRef.instance.data = item.data;
+  loadComponent() {
+    this.cardItemList.forEach(( cardItem,i) => {
+      const componentFactory = this.componentFactoryResolver.resolveComponentFactory(cardItem.component);
+      const viewContainerRef = this.cardDetailList.get(i).viewContainerRef;
+      viewContainerRef.clear();
+  
+      const componentRef = viewContainerRef.createComponent<DetailCardComponent>(componentFactory);
+      componentRef.instance.data = cardItem.data;      
+    });
+
+    // const item = new DetailCardItem(DetailCardComponent, 'dynamic component');
+    // const componentFactory = this.componentFactoryResolver.resolveComponentFactory(item.component);
+    // const viewContainerRef = this.cardDetailList.get(0).viewContainerRef;
+    // viewContainerRef.clear();
+
+    // const componentRef = viewContainerRef.createComponent<DetailCardComponent>(componentFactory);
+    // componentRef.instance.data = item.data;
   }
 
   printConsole() {
-    console.log('cardDetail : ' + this.cardDetail);
+    console.log('cardDetailList : ' + this.cardDetailList.length);
+
+    this.cardDetailList.forEach((i,e) => {
+      console.log(`i:${i}, e:${e}`);
+    });
+    
   }
 
 }
