@@ -22,7 +22,9 @@ export class GroupCardComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.loadComponent();
+    setTimeout(() => {
+      this.loadComponent();
+    });
   }
 
   ngAfterContentInit() {
