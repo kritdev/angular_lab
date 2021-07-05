@@ -1,10 +1,12 @@
 <mat-card class="bg-white border m-2">
   <div class="border-bottom">
     {{title}}
+    <button (click)="printConsole()">console</button>
   </div>
   <div class='row p-3'>
+    <!-- <app-detail-card class="col-md"></app-detail-card>
     <app-detail-card class="col-md"></app-detail-card>
-    <app-detail-card class="col-md"></app-detail-card>
-    <app-detail-card class="col-md"></app-detail-card>
+    <app-detail-card class="col-md"></app-detail-card> -->
+    <ng-template detailCard></ng-template>
   </div>
 </mat-card>

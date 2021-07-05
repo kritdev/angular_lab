@@ -9,6 +9,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { MainComponent } from './layout/main/main.component';
 import { GroupCardComponent } from './component/group-card/group-card.component';
 import { DetailCardComponent } from './component/detail-card/detail-card.component';
+import { DetailCardDirective } from './component/detail-card.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DetailCardComponent } from './component/detail-card/detail-card.compone
     SidebarComponent,
     MainComponent,
     GroupCardComponent,
-    DetailCardComponent
+    DetailCardComponent,
+    DetailCardDirective
   ],
   imports: [
     BrowserModule,
