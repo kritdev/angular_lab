@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailCardItem } from 'src/app/component/detail-card-item';
+import { DetailCardService } from 'src/app/component/detail-card.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  cardItemList: DetailCardItem[];
+
+  constructor(private detailCardService: DetailCardService) { }
 
   ngOnInit(): void {
+    this.retrieveCardDetail();
+  }
+  
+  retrieveCardDetail() {
+    this.cardItemList = this.detailCardService.retrieveCardDetail();
   }
 
 }

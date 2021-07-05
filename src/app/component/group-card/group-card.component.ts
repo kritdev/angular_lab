@@ -16,18 +16,12 @@ export class GroupCardComponent implements OnInit {
   
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
-  cardItemList: DetailCardItem[];
+  @Input() cardItemList: DetailCardItem[];
 
   ngOnInit(): void {
-    this.cardItemList = [
-      new DetailCardItem(DetailCardComponent, 'dynamic card 1'),
-      new DetailCardItem(DetailCardComponent, 'dynamic card 2'),
-      new DetailCardItem(DetailCardComponent, 'dynamic card 3'),
-    ];
   }
 
   ngAfterViewInit() {
-    this.printConsole();
     this.loadComponent();
   }
 
@@ -35,6 +29,8 @@ export class GroupCardComponent implements OnInit {
   }
 
   loadComponent() {
+    if(!this.cardItemList) { return;}
+    
     this.cardItemList.forEach(( cardItem,i) => {
       const componentFactory = this.componentFactoryResolver.resolveComponentFactory(cardItem.component);
       const viewContainerRef = this.cardDetailList.get(i).viewContainerRef;
@@ -43,14 +39,6 @@ export class GroupCardComponent implements OnInit {
       const componentRef = viewContainerRef.createComponent<DetailCardComponent>(componentFactory);
       componentRef.instance.data = cardItem.data;      
     });
-
-    // const item = new DetailCardItem(DetailCardComponent, 'dynamic component');
-    // const componentFactory = this.componentFactoryResolver.resolveComponentFactory(item.component);
-    // const viewContainerRef = this.cardDetailList.get(0).viewContainerRef;
-    // viewContainerRef.clear();
-
-    // const componentRef = viewContainerRef.createComponent<DetailCardComponent>(componentFactory);
-    // componentRef.instance.data = item.data;
   }
 
   printConsole() {
@@ -59,7 +47,6 @@ export class GroupCardComponent implements OnInit {
     this.cardDetailList.forEach((i,e) => {
       console.log(`i:${i}, e:${e}`);
     });
-    
   }
 
 }
