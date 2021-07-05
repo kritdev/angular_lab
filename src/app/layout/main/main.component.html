@@ -2,7 +2,11 @@
   <h3>Dashboard</h3>
   <div class="d-flex flex-column px-2">
 
-    <app-group-card [cardItemList]="cardItemList"></app-group-card>
+    <app-group-card 
+      [title]="'Sample Card'"
+      [iconName]="'home'"
+      [cardItemList]="cardItemList">
+    </app-group-card>
 
     <mat-card class="bg-white border m-2">
       <div class="border-bottom">

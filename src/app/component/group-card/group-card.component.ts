@@ -11,12 +11,13 @@ import { DetailCardComponent } from '../detail-card/detail-card.component';
 export class GroupCardComponent implements OnInit {
 
   @Input() title = 'card-title';
+  @Input() iconName: String;
+  @Input() cardItemList: DetailCardItem[];
 
   @ViewChildren(DetailCardDirective) cardDetailList!: QueryList<DetailCardDirective>;
   
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
-  @Input() cardItemList: DetailCardItem[];
 
   ngOnInit(): void {
   }
