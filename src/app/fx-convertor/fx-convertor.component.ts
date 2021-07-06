@@ -22,6 +22,7 @@ export class FxConvertorComponent implements OnInit {
       fromCurrency: ['', Validators.required], 
       fromAmount: ['', Validators.required], 
       toCurrency: ['', Validators.required], 
+      apiKey: ['', Validators.required],
       toAmount: '', 
     }); 
   }
@@ -32,10 +33,14 @@ export class FxConvertorComponent implements OnInit {
   convert() {
     let fromCurrency = this.form.value.fromCurrency;
     let toCurrency = this.form.value.toCurrency;
+    let apiKey = this.form.value.apiKey;
     let fxRate = 0.0;
 
+    let url = `http://api.exchangeratesapi.io/v1/latest?access_key=${apiKey}&symbols=${fromCurrency},${toCurrency}`
+    console.log(url);
+
     this.httpClient
-    .get(`https://api.exchangeratesapi.io/latest?symbols=${fromCurrency},${toCurrency}`)
+    .get(url)
     .pipe(
       catchError(error => {
         return throwError(
@@ -44,7 +49,7 @@ export class FxConvertorComponent implements OnInit {
     )
     .subscribe(
       result => {
-        this.fxData = result as any[];
+        this.fxData = result as any;
         fxRate = this.fxData['rates'][toCurrency] / this.fxData['rates'][fromCurrency];
         this.form.patchValue({
           toAmount: this.decimalPipe.transform((this.form.value.fromAmount * fxRate).toFixed(2))
