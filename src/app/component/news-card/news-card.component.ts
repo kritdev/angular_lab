@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NewsCardComponent implements OnInit {
 
-  @Input() data = 'detail-data';
+  @Input() data = {title:'news-title', content:'news-content'};
   
   constructor() { }
 
