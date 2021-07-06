@@ -10,6 +10,7 @@ import { MainComponent } from './layout/main/main.component';
 import { GroupCardComponent } from './component/group-card/group-card.component';
 import { DetailCardComponent } from './component/detail-card/detail-card.component';
 import { DetailCardDirective } from './component/detail-card.directive';
+import { NewsCardComponent } from './component/news-card/news-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DetailCardDirective } from './component/detail-card.directive';
     MainComponent,
     GroupCardComponent,
     DetailCardComponent,
-    DetailCardDirective
+    DetailCardDirective,
+    NewsCardComponent
   ],
   imports: [
     BrowserModule,
