@@ -14,11 +14,18 @@
       [cardItemList]="staticticCardList">
     </app-group-card>
 
-    <app-group-card 
-      [title]="'Order totals'"
-      [iconName]="'payments'"
-      [cardItemList]="orderTable">
-    </app-group-card>
+    <div class="row m-0">
+      <app-group-card class="col-md-8 p-0"
+        [title]="'Order totals'"
+        [iconName]="'payments'"
+        [cardItemList]="orderTable">
+      </app-group-card>  
+      <app-group-card class="col-md-4 p-0"
+        [title]="'Incomplete orders'"
+        [iconName]="'payments'"
+        [cardItemList]="incompleteOrderTable">
+      </app-group-card>
+    </div>
 
   </div>
 </main>
