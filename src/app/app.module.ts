@@ -11,6 +11,7 @@ import { GroupCardComponent } from './component/group-card/group-card.component'
 import { DetailCardComponent } from './component/detail-card/detail-card.component';
 import { DetailCardDirective } from './component/detail-card.directive';
 import { NewsCardComponent } from './component/news-card/news-card.component';
+import { StatisticCardComponent } from './component/statistic-card/statistic-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NewsCardComponent } from './component/news-card/news-card.component';
     GroupCardComponent,
     DetailCardComponent,
     DetailCardDirective,
-    NewsCardComponent
+    NewsCardComponent,
+    StatisticCardComponent
   ],
   imports: [
     BrowserModule,
