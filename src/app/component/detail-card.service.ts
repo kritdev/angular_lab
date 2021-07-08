@@ -3,6 +3,7 @@ import { DetailCardItem } from './detail-card-item';
 import { DetailCardComponent } from './detail-card/detail-card.component';
 import { NewsCardComponent } from './news-card/news-card.component';
 import { StatisticCardComponent } from './statistic-card/statistic-card.component';
+import { TableCardComponent } from './table-card/table-card.component';
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +34,12 @@ export class DetailCardService {
       new DetailCardItem(StatisticCardComponent, {title:'Low stock products', count:1, iconName:'trending_down', bgClass:'bg-danger'}),
     ];
   }
+
+  retrieveOrderTableCard(): DetailCardItem[] {
+    return [
+      new DetailCardItem(TableCardComponent, {title:'Orders'}),
+    ];
+  }
+
   constructor() { }
 }

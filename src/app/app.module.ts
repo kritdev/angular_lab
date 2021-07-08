@@ -12,6 +12,7 @@ import { DetailCardComponent } from './component/detail-card/detail-card.compone
 import { DetailCardDirective } from './component/detail-card.directive';
 import { NewsCardComponent } from './component/news-card/news-card.component';
 import { StatisticCardComponent } from './component/statistic-card/statistic-card.component';
+import { TableCardComponent } from './component/table-card/table-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { StatisticCardComponent } from './component/statistic-card/statistic-car
     DetailCardComponent,
     DetailCardDirective,
     NewsCardComponent,
-    StatisticCardComponent
+    StatisticCardComponent,
+    TableCardComponent
   ],
   imports: [
     BrowserModule,

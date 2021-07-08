@@ -12,6 +12,7 @@ export class MainComponent implements OnInit {
   cardItemList: DetailCardItem[];
   newsCardList: DetailCardItem[];
   staticticCardList: DetailCardItem[];
+  orderTable: DetailCardItem[];
 
   constructor(private detailCardService: DetailCardService) { }
 
@@ -23,6 +24,7 @@ export class MainComponent implements OnInit {
     this.cardItemList = this.detailCardService.retrieveCardDetail();
     this.newsCardList = this.detailCardService.retrieveNewsCards();
     this.staticticCardList = this.detailCardService.retrieveStatisticCards();
+    this.orderTable = this.detailCardService.retrieveOrderTableCard();
   }
 
 }
