@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class StatisticCardComponent implements OnInit {
 
-  @Input() data = {title:'news-title', content:'news-content'};
+  @Input() data = {title:'news-title', count:0, iconName:'shopping_bag', bgClass:'bg-primary'};
   
   constructor() { }
 
