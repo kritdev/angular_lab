@@ -37,7 +37,16 @@ export class DetailCardService {
 
   retrieveOrderTableCard(): DetailCardItem[] {
     return [
-      new DetailCardItem(TableCardComponent, {title:'Orders'}),
+      new DetailCardItem(TableCardComponent, {
+        columns: ['Order Status', 'Today', 'This Week', 'This Month', 'This Year', 'All time'],
+        types: ['text', 'text', 'text', 'text', 'text', 'text'],
+        records: [
+            ['Pending','$0.00','$0.00','$0.00','$0.00','$2,468.80'],
+            ['Processing','$0.00','$0.00','$0.00','$0.00','$1,957.00'],
+            ['Complete','$0.00','$0.00','$0.00','$0.00','$43.50'],
+            ['Cancelled','$0.00','$0.00','$0.00','$0.00','$0.00'],
+          ]
+      }),
     ];
   }
 

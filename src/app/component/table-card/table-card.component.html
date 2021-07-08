@@ -1,9 +1,13 @@
 
-<mat-card class="bg-white border p-0 m-1">
-  <div class="border-bottom px-3 py-2 news-header text-primary">
-      {{data.title}}
-  </div>
-  <div class="px-3 py-2">
-    {{data.content}}
-  </div>
-</mat-card>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let column of data.columns">{{column}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of data.records">
+      <td *ngFor="let value of record">{{value}}</td>
+    </tr>
+  </tbody>
+</table>
