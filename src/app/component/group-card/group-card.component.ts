@@ -52,4 +52,8 @@ export class GroupCardComponent implements OnInit {
     });
   }
 
+  columnStyle() {
+    return this.cardItemList.length == 4? 'col-lg-3 col-6' : 'col-md';
+  }
+
 }
