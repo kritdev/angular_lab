@@ -5,6 +5,10 @@
   vertical-align: sub;
 }
 
+.btn_autorenew {
+  vertical-align: middle;
+}
+
 .btn_visibility {
   width: 105px;
   height: 28px;
