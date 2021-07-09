@@ -27,5 +27,18 @@
       </app-group-card>
     </div>
 
+    <div class="row m-0">
+      <app-group-card class="col-md-8 p-0"
+        [title]="'Latest Orders'"
+        [iconName]="'add_shopping_cart'"
+        [cardItemList]="lastOrderTable">
+      </app-group-card>  
+      <app-group-card class="col-md-4 p-0"
+        [title]="'Popular search keywords'"
+        [iconName]="'search'"
+        [cardItemList]="popularSearchKeywordTable">
+      </app-group-card>
+    </div>
+
   </div>
 </main>

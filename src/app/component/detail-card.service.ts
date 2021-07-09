@@ -45,7 +45,7 @@ export class DetailCardService {
             ['Processing','$0.00','$0.00','$0.00','$0.00','$1,957.00'],
             ['Complete','$0.00','$0.00','$0.00','$0.00','$43.50'],
             ['Cancelled','$0.00','$0.00','$0.00','$0.00','$0.00'],
-          ]
+        ]
       }),
     ];
   }
@@ -59,7 +59,39 @@ export class DetailCardService {
           ['Total unpaid orders (pending payment status)','$2,468.80',10],
           ['Total not yet shipped orders','$4,315.00',20],
           ['Total incomplete orders (pending order status','$2,468.80',30],          
-          ]
+        ]
+      }),
+    ];
+  }
+  
+  retrieveLastOrderTableCard(): DetailCardItem[] {
+    return [
+      new DetailCardItem(TableCardComponent, {
+        columns: ['Order #','Order status','Customer','Created on','View'],
+        types: ['text', 'status', 'text', 'text', 'view-button'],
+        records: [
+          ['5','Complete','Victoria Terces (victoria_victoria@nopCommerce.com)','03/13/2017 6:20:10 AM', 1],
+          ['4','Processing','Brenda Lindgren (brenda_lindgren@nopCommerce.com)','03/13/2017 6:20:09 AM', 1],
+          ['3','Pending','James Pan (james_pan@nopCommerce.com)','03/13/2017 6:20:09 AM', 1],
+          ['2','Pending','Arthur Holmes (arthur_holmes@nopCommerce.com)','03/13/2017 6:20:09 AM', 1],
+          ['1','Processing','Steve Gates (steve_gates@nopCommerce.com)','03/13/2017 6:20:09 AM', 1],     
+        ]
+      }),
+    ];
+  }
+  
+  retrievePopularSearchKeywordCard(): DetailCardItem[] {
+    return [
+      new DetailCardItem(TableCardComponent, {
+        columns: ['Keyword','Count'],
+        types: ['text', 'text'],
+        records: [
+          ['computer','34'],
+          ['camera','30'],
+          ['jewelry','27'],
+          ['shoes','26'],
+          ['jeans','19'],       
+        ]
       }),
     ];
   }

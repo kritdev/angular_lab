@@ -14,6 +14,8 @@ export class MainComponent implements OnInit {
   staticticCardList: DetailCardItem[];
   orderTable: DetailCardItem[];
   incompleteOrderTable: DetailCardItem[];
+  lastOrderTable: DetailCardItem[];
+  popularSearchKeywordTable: DetailCardItem[];
 
   constructor(private detailCardService: DetailCardService) { }
 
@@ -27,6 +29,8 @@ export class MainComponent implements OnInit {
     this.staticticCardList = this.detailCardService.retrieveStatisticCards();
     this.orderTable = this.detailCardService.retrieveOrderTableCard();
     this.incompleteOrderTable = this.detailCardService.retrieveIncompleteOrderTableCard();
+    this.lastOrderTable = this.detailCardService.retrieveLastOrderTableCard();
+    this.popularSearchKeywordTable = this.detailCardService.retrievePopularSearchKeywordCard();
   }
 
 }
