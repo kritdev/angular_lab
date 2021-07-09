@@ -10,7 +10,9 @@
       <td *ngFor="let value of record; let i = index" [ngSwitch]="data.types[i]">
         <span *ngSwitchCase="'view-button'">
           <a class="btn btn-secondary btn_visibility" href="#">
-            <mat-icon class="visibility">visibility</mat-icon> 2 - view all
+            <mat-icon class="visibility">visibility</mat-icon> 
+            <span *ngIf="value > 1">{{value}} -</span>
+            view all
           </a>
         </span>
         <span *ngSwitchDefault>{{value}}</span>

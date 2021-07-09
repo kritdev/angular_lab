@@ -56,9 +56,9 @@ export class DetailCardService {
         columns: ['Item','Total','Count'],
         types: ['text', 'text', 'view-button'],
         records: [
-          ['Total unpaid orders (pending payment status)','$2,468.80',10],
-          ['Total not yet shipped orders','$4,315.00',20],
-          ['Total incomplete orders (pending order status','$2,468.80',30],          
+          ['Total unpaid orders (pending payment status)','$2,468.80',2],
+          ['Total not yet shipped orders','$4,315.00',2],
+          ['Total incomplete orders (pending order status','$2,468.80',2],          
         ]
       }),
     ];
