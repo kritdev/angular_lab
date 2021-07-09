@@ -15,6 +15,9 @@
             view all
           </a>
         </span>
+        <span *ngSwitchCase="'status'" class="status" [class]="value">
+          {{value}}
+        </span>
         <span *ngSwitchDefault>{{value}}</span>
       </td>
     </tr>
