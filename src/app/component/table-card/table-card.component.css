@@ -1,0 +1,13 @@
+.visibility {
+  font-size: 1rem;
+  width: 20px;
+  height: 24px;
+  vertical-align: sub;
+}
+
+.btn_visibility {
+  width: 105px;
+  height: 28px;
+  padding: 2px;
+  font-size: 1rem;
+}
