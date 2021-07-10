@@ -6,7 +6,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let record of data.records">
+    <tr *ngFor="let record of getDisplayRecord()">
       <td *ngFor="let value of record; let i = index" [ngSwitch]="data.types[i]">
         <span *ngSwitchCase="'view-button'">
           <a class="btn btn-secondary btn_visibility" href="#">

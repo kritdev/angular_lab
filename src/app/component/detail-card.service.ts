@@ -114,7 +114,8 @@ export class DetailCardService {
           ["Flower Girl Bracelet","1","$360.0",1],
           ["Vintage Style Engagement Ring","1","$2,100.00",1],
           ["$25 Virtual Gift Card","1","$25.0",1],
-        ]
+        ],
+        itemPerPage: 5
       }),
     ];
   }
