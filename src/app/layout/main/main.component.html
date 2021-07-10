@@ -40,5 +40,18 @@
       </app-group-card>
     </div>
 
+    <div class="row m-0">
+      <app-group-card class="col-md-6 p-0"
+        [title]="'Bestsellers by quantity'"
+        [iconName]="'star'"
+        [cardItemList]="bestSellerTable">
+      </app-group-card>  
+      <app-group-card class="col-md-6 p-0"
+        [title]="'Bestsellers by amount'"
+        [iconName]="'star_border'"
+        [cardItemList]="bestSellerTable">
+      </app-group-card>
+    </div>
+
   </div>
 </main>

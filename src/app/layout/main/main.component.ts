@@ -16,6 +16,7 @@ export class MainComponent implements OnInit {
   incompleteOrderTable: DetailCardItem[];
   lastOrderTable: DetailCardItem[];
   popularSearchKeywordTable: DetailCardItem[];
+  bestSellerTable: DetailCardItem[];
 
   constructor(private detailCardService: DetailCardService) { }
 
@@ -31,6 +32,7 @@ export class MainComponent implements OnInit {
     this.incompleteOrderTable = this.detailCardService.retrieveIncompleteOrderTableCard();
     this.lastOrderTable = this.detailCardService.retrieveLastOrderTableCard();
     this.popularSearchKeywordTable = this.detailCardService.retrievePopularSearchKeywordCard();
+    this.bestSellerTable = this.detailCardService.retrieveBestSellerCard();
   }
 
 }

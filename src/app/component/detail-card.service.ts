@@ -96,5 +96,28 @@ export class DetailCardService {
     ];
   }
 
+  retrieveBestSellerCard(): DetailCardItem[] {
+    return [
+      new DetailCardItem(TableCardComponent, {
+        columns: ['Name','Total quantity','Total amount (excl tax)','View'],
+        types: ['text', 'text', 'text', 'view-button'],
+        records: [
+          ["Leica T Mirrorless Digital Camera","1","$530.00",1],
+          ["Apple iCam","1","$1,300.00",1],
+          ["Levi's 511 Jeans","1","$43.50",1],
+          ["Night Visions","1","$2.80",1],
+          ["If You Wait (donation)","1","$3.0",1],
+          ["Science & Faith","1","$3.00",1],
+          ["Fahrenheit 451 by Ray Bradbury","1","$27.00",1],
+          ["First Prize Pies","1","$51.00",1],
+          ["Pride and Prejudice","1","$24.00",1],
+          ["Flower Girl Bracelet","1","$360.0",1],
+          ["Vintage Style Engagement Ring","1","$2,100.00",1],
+          ["$25 Virtual Gift Card","1","$25.0",1],
+        ]
+      }),
+    ];
+  }
+
   constructor() { }
 }
