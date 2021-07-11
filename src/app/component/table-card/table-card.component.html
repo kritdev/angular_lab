@@ -30,7 +30,11 @@
 </ng-container>
 
 <ng-template #displayPaging>
-  <app-paging></app-paging>
+  <app-paging
+    [totalItem]="this.data.records.length"
+    [itemPerPage]="this.data.itemPerPage"
+    >
+  </app-paging>
 </ng-template>
 
 <ng-template #displayRefresh>
