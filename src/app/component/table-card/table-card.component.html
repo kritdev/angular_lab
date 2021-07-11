@@ -33,6 +33,7 @@
   <app-paging
     [totalItem]="this.data.records.length"
     [itemPerPage]="this.data.itemPerPage"
+    (OnPageChange)="onPageChange($event)"
     >
   </app-paging>
 </ng-template>

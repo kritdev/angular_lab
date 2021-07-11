@@ -32,4 +32,7 @@ export class TableCardComponent implements OnInit {
     }
   }
 
+  onPageChange(event) {
+    this.activePage = event;
+  }
 }

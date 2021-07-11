@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-paging',
@@ -9,6 +9,9 @@ export class PagingComponent implements OnInit {
 
   @Input() totalItem = 1;
   @Input() itemPerPage = 1;
+
+  @Output()
+  OnPageChange: EventEmitter<number> = new EventEmitter<number>();
 
   activePage = 1;
 
@@ -44,13 +47,14 @@ export class PagingComponent implements OnInit {
 
   setActivePage(pageNumber) {
     this.activePage = pageNumber;
+    this.OnPageChange.emit(this.activePage);
   }
 
   toPreviousPage() {
-    this.activePage -= 1;
+    this.setActivePage(this.activePage - 1);
   }
 
   toNextPage() {
-    this.activePage += 1;
+    this.setActivePage(this.activePage + 1);
   }
 }
