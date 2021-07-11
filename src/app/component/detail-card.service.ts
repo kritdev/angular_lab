@@ -91,7 +91,8 @@ export class DetailCardService {
           ['camera','30'],
           ['jewelry','27'],
           ['shoes','26'],
-          ['jeans','19'],       
+          ['jeans','19'],     
+          ['gift','10'],
         ],
         itemPerPage: 5
       }),
