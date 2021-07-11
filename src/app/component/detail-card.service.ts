@@ -75,7 +75,8 @@ export class DetailCardService {
           ['3','Pending','James Pan (james_pan@nopCommerce.com)','03/13/2017 6:20:09 AM', 1],
           ['2','Pending','Arthur Holmes (arthur_holmes@nopCommerce.com)','03/13/2017 6:20:09 AM', 1],
           ['1','Processing','Steve Gates (steve_gates@nopCommerce.com)','03/13/2017 6:20:09 AM', 1],     
-        ]
+        ],
+        itemPerPage: 5
       }),
     ];
   }
@@ -91,7 +92,8 @@ export class DetailCardService {
           ['jewelry','27'],
           ['shoes','26'],
           ['jeans','19'],       
-        ]
+        ],
+        itemPerPage: 5
       }),
     ];
   }

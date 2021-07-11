@@ -13,6 +13,7 @@ import { DetailCardDirective } from './component/detail-card.directive';
 import { NewsCardComponent } from './component/news-card/news-card.component';
 import { StatisticCardComponent } from './component/statistic-card/statistic-card.component';
 import { TableCardComponent } from './component/table-card/table-card.component';
+import { PagingComponent } from './component/paging/paging.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TableCardComponent } from './component/table-card/table-card.component'
     DetailCardDirective,
     NewsCardComponent,
     StatisticCardComponent,
-    TableCardComponent
+    TableCardComponent,
+    PagingComponent
   ],
   imports: [
     BrowserModule,

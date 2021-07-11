@@ -23,8 +23,20 @@
     </tr>
   </tbody>
 </table>
-<div style="text-align: end;">
-  <button class="btn btn-secondary" tabindex="0" aria-controls="average-order-report-grid" type="button">
-    <mat-icon class="btn_autorenew">autorenew</mat-icon>
-  </button>
-</div>
+
+<!-- ********************** footer ************************* -->
+<ng-container
+  *ngIf="this.data.itemPerPage > 0; then displayPaging; else displayRefresh">
+</ng-container>
+
+<ng-template #displayPaging>
+  <app-paging></app-paging>
+</ng-template>
+
+<ng-template #displayRefresh>
+  <div style="text-align: end;">
+    <button class="btn btn-secondary" tabindex="0" aria-controls="average-order-report-grid" type="button">
+      <mat-icon class="btn_autorenew">autorenew</mat-icon>
+    </button>
+  </div>
+</ng-template>
