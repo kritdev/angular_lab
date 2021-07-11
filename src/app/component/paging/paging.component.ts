@@ -10,7 +10,7 @@ export class PagingComponent implements OnInit {
   @Input() totalItem = 1;
   @Input() itemPerPage = 1;
 
-  activePage = 2;
+  activePage = 1;
 
   constructor() { }
 
@@ -26,4 +26,31 @@ export class PagingComponent implements OnInit {
     return result < this.totalItem ? result : this.totalItem;
   }
 
+  getTotalPage() {
+    return Math.ceil(this.totalItem/this.itemPerPage);
+  }
+
+  getPageArray() {
+    return Array(this.getTotalPage()).fill(1).map((x, i) => i + 1);
+  }
+
+  isFirstPage() {
+    return this.activePage == 1;
+  }
+
+  isLastPage() {
+    return this.activePage == this.getTotalPage();
+  }
+
+  setActivePage(pageNumber) {
+    this.activePage = pageNumber;
+  }
+
+  toPreviousPage() {
+    this.activePage -= 1;
+  }
+
+  toNextPage() {
+    this.activePage += 1;
+  }
 }

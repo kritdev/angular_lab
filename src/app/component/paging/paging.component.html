@@ -1,8 +1,27 @@
 <div class="d-flex justify-content-between">
   <div>
-    x
+    <ul class="pagination">
+      <!-- Previous button -->
+      <li class="page-item" [class.disabled]="isFirstPage()">
+        <a class="page-link" aria-label="Previous" (click)="toPreviousPage()">
+          <span aria-hidden="true"><mat-icon>arrow_left</mat-icon></span>
+        </a>
+      </li>
+
+      <!-- Page number button -->
+      <li class="page-item" [class.active]="item==activePage" *ngFor="let item of getPageArray()">
+        <a class="page-link" (click)="setActivePage(item)">{{item}}</a>
+      </li>
+      
+      <!-- Next button -->
+      <li class="page-item" [class.disabled]="isLastPage()">
+        <a class="page-link" aria-label="Next" (click)="toNextPage()">
+          <span aria-hidden="true"><mat-icon>arrow_right</mat-icon></span>
+        </a>
+      </li>
+    </ul>
   </div>
-  <div>
+  <div class="page-total">
     {{getFirstItemInPage()}} - {{getLastItemInPage()}} of {{totalItem}} items
   </div>
 </div>
