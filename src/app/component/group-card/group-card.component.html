@@ -1,0 +1,17 @@
+<mat-card class="bg-white border m-2 p-0">
+  <div class="d-flex border-bottom px-3 py-2 align-items-center">
+    <div class="flex-grow-1">
+      <mat-icon style="vertical-align: text-bottom;">{{iconName}}</mat-icon>
+      {{title}}
+      <a class="btn btn-xs btn-info" [href]="button.link" *ngIf="button.name != '' ">{{button.name}}</a>
+    </div>
+    <mat-icon (click)="toggleDisplay()">
+      {{ showDetail? 'remove': 'add'}}
+    </mat-icon>
+  </div>
+  <div class="group-card-detail row p-3 m-0" [class.display-none]="!showDetail">
+    <div *ngFor="let item of cardItemList" class="p-0" [class]="columnStyle()">
+      <ng-template detailCard></ng-template>
+    </div>
+  </div>
+</mat-card>

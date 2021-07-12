@@ -7,13 +7,31 @@ import { MaterialModule } from './material/material.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { MainComponent } from './layout/main/main.component';
+import { GroupCardComponent } from './component/group-card/group-card.component';
+import { DetailCardComponent } from './component/detail-card/detail-card.component';
+import { DetailCardDirective } from './component/detail-card.directive';
+import { NewsCardComponent } from './component/news-card/news-card.component';
+import { StatisticCardComponent } from './component/statistic-card/statistic-card.component';
+import { TableCardComponent } from './component/table-card/table-card.component';
+import { PagingComponent } from './component/paging/paging.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { BackToTopComponent } from './layout/back-to-top/back-to-top.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SidebarComponent,
-    MainComponent
+    MainComponent,
+    GroupCardComponent,
+    DetailCardComponent,
+    DetailCardDirective,
+    NewsCardComponent,
+    StatisticCardComponent,
+    TableCardComponent,
+    PagingComponent,
+    FooterComponent,
+    BackToTopComponent
   ],
   imports: [
     BrowserModule,
