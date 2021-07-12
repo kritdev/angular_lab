@@ -1,4 +1,7 @@
-<p>back-to-top works!</p>
-<a id="backTop" href="#Top" class="btn btn-back-top bg-teal" style="display: inline;">
+<a id="backTop" href="#Top" 
+  class="btn btn-back-top bg-teal" 
+  [class.display-none]="hideBacktoTop" 
+  [class.display-inline]="!hideBacktoTop" 
+  (scroll)="onScroll($event)">
   <mat-icon>expand_less</mat-icon>
 </a>
