@@ -8,6 +8,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class BackToTopComponent implements OnInit {
 
   hideBacktoTop = true;
+  removeComponent = true;
 
   constructor() { }
 
@@ -16,7 +17,12 @@ export class BackToTopComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event) {
-    // let y = window.scrollY;
     this.hideBacktoTop = 100 >= window.scrollY;
+
+    if(this.hideBacktoTop) {
+      setTimeout(() => this.removeComponent = this.hideBacktoTop, 3000);
+    } else {
+      this.removeComponent = this.hideBacktoTop;
+    }
   }
 }

@@ -2,6 +2,7 @@
   class="btn btn-back-top bg-teal" 
   [class.display-none]="hideBacktoTop" 
   [class.display-inline]="!hideBacktoTop" 
+  [class.visually-hidden]="removeComponent"
   (scroll)="onScroll($event)">
   <mat-icon>expand_less</mat-icon>
 </a>

@@ -1,4 +1,5 @@
 #backTop {
+  display: inline;
   cursor: pointer;
 
   right: 40px;
@@ -20,7 +21,7 @@
   font-size: 1rem;
   line-height: 1.5;
   border-radius: .25rem;
-  /* transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+  transition: opacity 1.5s;
 }
 
 mat-icon {
@@ -31,9 +32,9 @@ mat-icon {
 }
 
 .display-inline {
-  display: inline;
+  opacity: 1;
 }
 
 .display-none {
-  display: none;
+  opacity: 0;
 }
