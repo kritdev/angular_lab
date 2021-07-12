@@ -15,6 +15,7 @@ import { StatisticCardComponent } from './component/statistic-card/statistic-car
 import { TableCardComponent } from './component/table-card/table-card.component';
 import { PagingComponent } from './component/paging/paging.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { BackToTopComponent } from './layout/back-to-top/back-to-top.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     StatisticCardComponent,
     TableCardComponent,
     PagingComponent,
-    FooterComponent
+    FooterComponent,
+    BackToTopComponent
   ],
   imports: [
     BrowserModule,
