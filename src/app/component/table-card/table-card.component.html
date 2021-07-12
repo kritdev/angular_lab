@@ -1,0 +1,47 @@
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let column of data.columns">{{column}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of getDisplayRecord()">
+      <td *ngFor="let value of record; let i = index" [ngSwitch]="data.types[i]">
+        <span *ngSwitchCase="'view-button'">
+          <a class="btn btn-secondary btn_visibility" href="#">
+            <mat-icon class="visibility">visibility</mat-icon> 
+            <span *ngIf="value > 1">{{value}} -</span>
+            view all
+          </a>
+        </span>
+        <span *ngSwitchCase="'status'" class="status" [class]="value">
+          {{value}}
+        </span>
+        <span *ngSwitchDefault>{{value}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ********************** footer ************************* -->
+<ng-container
+  *ngIf="this.data.itemPerPage > 0; then displayPaging; else displayRefresh">
+</ng-container>
+
+<ng-template #displayPaging>
+  <app-paging
+    [totalItem]="this.data.records.length"
+    [itemPerPage]="this.data.itemPerPage"
+    (OnPageChange)="onPageChange($event)"
+    >
+  </app-paging>
+</ng-template>
+
+<ng-template #displayRefresh>
+  <div style="text-align: end;">
+    <button class="btn btn-secondary" tabindex="0" aria-controls="average-order-report-grid" type="button">
+      <mat-icon class="btn_autorenew">autorenew</mat-icon>
+    </button>
+  </div>
+</ng-template>

@@ -1,0 +1,36 @@
+.visibility {
+  font-size: 1rem;
+  width: 20px;
+  height: 24px;
+  vertical-align: sub;
+}
+
+.btn_autorenew {
+  vertical-align: middle;
+}
+
+.btn_visibility {
+  height: 28px;
+  white-space: nowrap;
+  padding: 2px;
+  font-size: 1rem;
+}
+
+/* Status */
+.status {
+  color: #fff;
+  padding: .2em .6em .3em;
+  border-radius: .25em;
+}
+
+.Complete {
+  background-color: #00a65a;
+}
+
+.Processing {
+  background-color: #00c0ef;
+}
+
+.Pending {
+  background-color: #f39c12;
+}

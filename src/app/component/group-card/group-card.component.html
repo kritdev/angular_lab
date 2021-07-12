@@ -3,11 +3,14 @@
     <div class="flex-grow-1">
       <mat-icon style="vertical-align: text-bottom;">{{iconName}}</mat-icon>
       {{title}}
+      <a class="btn btn-xs btn-info" [href]="button.link" *ngIf="button.name != '' ">{{button.name}}</a>
     </div>
-    <mat-icon>remove</mat-icon>
+    <mat-icon (click)="toggleDisplay()">
+      {{ showDetail? 'remove': 'add'}}
+    </mat-icon>
   </div>
-  <div class="row p-3 m-0">
-    <div *ngFor="let item of cardItemList" class="col-md p-0" >
+  <div class="group-card-detail row p-3 m-0" [class.display-none]="!showDetail">
+    <div *ngFor="let item of cardItemList" class="p-0" [class]="columnStyle()">
       <ng-template detailCard></ng-template>
     </div>
   </div>

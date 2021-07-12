@@ -12,6 +12,10 @@ import { DetailCardComponent } from './component/detail-card/detail-card.compone
 import { DetailCardDirective } from './component/detail-card.directive';
 import { NewsCardComponent } from './component/news-card/news-card.component';
 import { StatisticCardComponent } from './component/statistic-card/statistic-card.component';
+import { TableCardComponent } from './component/table-card/table-card.component';
+import { PagingComponent } from './component/paging/paging.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { BackToTopComponent } from './layout/back-to-top/back-to-top.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { StatisticCardComponent } from './component/statistic-card/statistic-car
     DetailCardComponent,
     DetailCardDirective,
     NewsCardComponent,
-    StatisticCardComponent
+    StatisticCardComponent,
+    TableCardComponent,
+    PagingComponent,
+    FooterComponent,
+    BackToTopComponent
   ],
   imports: [
     BrowserModule,

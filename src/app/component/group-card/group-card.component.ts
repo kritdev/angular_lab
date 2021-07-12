@@ -13,11 +13,13 @@ export class GroupCardComponent implements OnInit {
   @Input() title = 'card-title';
   @Input() iconName: String;
   @Input() cardItemList: DetailCardItem[];
+  @Input() button = {name:'', link:''};
 
   @ViewChildren(DetailCardDirective) cardDetailList!: QueryList<DetailCardDirective>;
   
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
+  showDetail = true;
 
   ngOnInit(): void {
   }
@@ -50,6 +52,14 @@ export class GroupCardComponent implements OnInit {
     this.cardDetailList.forEach((i,e) => {
       console.log(`i:${i}, e:${e}`);
     });
+  }
+
+  columnStyle() {
+    return this.cardItemList.length == 4? 'col-lg-3 col-6' : 'col-md';
+  }
+
+  toggleDisplay() {
+    this.showDetail = !this.showDetail;
   }
 
 }
