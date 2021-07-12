@@ -19,6 +19,7 @@ export class GroupCardComponent implements OnInit {
   
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
+  showDetail = true;
 
   ngOnInit(): void {
   }
@@ -55,6 +56,10 @@ export class GroupCardComponent implements OnInit {
 
   columnStyle() {
     return this.cardItemList.length == 4? 'col-lg-3 col-6' : 'col-md';
+  }
+
+  toggleDisplay() {
+    this.showDetail = !this.showDetail;
   }
 
 }
