@@ -14,6 +14,7 @@ import { NewsCardComponent } from './component/news-card/news-card.component';
 import { StatisticCardComponent } from './component/statistic-card/statistic-card.component';
 import { TableCardComponent } from './component/table-card/table-card.component';
 import { PagingComponent } from './component/paging/paging.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PagingComponent } from './component/paging/paging.component';
     NewsCardComponent,
     StatisticCardComponent,
     TableCardComponent,
-    PagingComponent
+    PagingComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
