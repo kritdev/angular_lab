@@ -1,3 +1,9 @@
 mat-card {
   border-top: 3px solid #007bff !important;
 }
+
+.btn-xs {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin-left: 10px;
+}

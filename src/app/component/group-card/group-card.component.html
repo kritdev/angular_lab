@@ -3,6 +3,7 @@
     <div class="flex-grow-1">
       <mat-icon style="vertical-align: text-bottom;">{{iconName}}</mat-icon>
       {{title}}
+      <a class="btn btn-xs btn-info" [href]="button.link" *ngIf="button.name != '' ">{{button.name}}</a>
     </div>
     <mat-icon>remove</mat-icon>
   </div>

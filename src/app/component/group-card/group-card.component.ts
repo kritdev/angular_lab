@@ -13,6 +13,7 @@ export class GroupCardComponent implements OnInit {
   @Input() title = 'card-title';
   @Input() iconName: String;
   @Input() cardItemList: DetailCardItem[];
+  @Input() button = {name:'', link:''};
 
   @ViewChildren(DetailCardDirective) cardDetailList!: QueryList<DetailCardDirective>;
   
