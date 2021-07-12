@@ -15,6 +15,25 @@
   margin-bottom: 6px;
 }
 
+.search-box {
+  color: rgb(194, 199, 208);
+}
+
+.input-search-box {
+  color: rgb(194, 199, 208);;
+  margin: 8px 16px;
+  padding: 4px 30px 4px 10px;
+  border: solid rgb(194, 199, 208) 1px;
+  background: transparent;
+  width: 80%;
+}
+
+.search-box > mat-icon {
+  color: rgb(107, 108, 108);
+  position: absolute;
+  right: 40px;
+  top: 70px;
+}
 /* ********************************************* */
 .example-tree-invisible {
   display: none;

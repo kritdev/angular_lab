@@ -7,6 +7,12 @@
 <div class="sidebar sidebar-width d-md-block d-none"> 
   <img src="https://admin-demo.nopcommerce.com/css/admin/images/logo.png" class='a-logo' alt="">
   <hr class="text-light m-0">
+
+  <div class="search-box d-flex justify-content-between">
+      <input type="text" class="input-search-box" placeholder="Search" autocomplete="off" spellcheck="false" dir="auto">
+      <mat-icon>search</mat-icon>
+   </div>
+
   <div class="nav-item-group">
       <div class="os-viewport">
         <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
