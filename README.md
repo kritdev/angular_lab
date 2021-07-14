@@ -1,3 +1,3 @@
 # Portfolio Project
 
-[Demo](https://skillplug.net/profile/krit/portfolio/angular/portfolio/portfolio)
+[Demo](https://skillplug.net/profile/krit/portfolio/angular/portfolio)
